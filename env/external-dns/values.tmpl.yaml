@@ -5,6 +5,6 @@ provider: google
 google:
   serviceAccountSecret: external-dns-gcp-sa
 rbac:
-  create: "true"
+  create: true
 domainFilters:
 - "{{ .Requirements.ingress.domain }}"
