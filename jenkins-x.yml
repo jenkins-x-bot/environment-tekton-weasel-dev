@@ -11,7 +11,7 @@ pipelineConfig:
         stages:
           - name: release
             steps:
-              - name: verify-preintall
+              - name: verify-preinstall
                 dir: /workspace/source/env
                 command: jx
                 args: ['step','verify','preinstall']
