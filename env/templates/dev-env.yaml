@@ -56,4 +56,4 @@ spec:
       classifier: reports
 {{- end }}
     useGitOps: true
-  webHookEngine: Prow
+  webHookEngine: "{{ .Values.gitops.webhook }}"

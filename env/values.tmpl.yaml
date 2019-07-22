@@ -11,6 +11,8 @@ gitops:
   gitKind: github
   server: https://github.com
   owner: ""
+  webhook: {{ .Requirements.webhook | default "prow" | title | quote }}
+
 
   dev:
     server: ""

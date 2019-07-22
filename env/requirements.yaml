@@ -12,7 +12,7 @@ dependencies:
   alias: lighthouse
   name: lighthouse
   repository: http://chartmuseum.jenkins-x.io
-  version: 0.0.39
+  version: 0.0.46
 - name: jenkins-x-platform
   repository: http://chartmuseum.jenkins-x.io
   version: 2.0.752
