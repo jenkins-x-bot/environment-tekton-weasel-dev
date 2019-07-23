@@ -129,7 +129,10 @@
                     "type": "string",
                     "format": "token",
                     "title": "Pipeline bot Git token",
-                    "description": "A token for the Git user that will perform git operations inside a pipeline. This includes environment repository creation, and so this token should have full repository permissions."
+                    "description": "A token for the Git user that will perform git operations inside a pipeline. This includes environment repository creation, and so this token should have full repository permissions.",
+                    "minLength": 40,
+                    "maxLength": 40,
+                    "pattern": "^[0-9a-f]{40}$"
                   }
                 }
               }
