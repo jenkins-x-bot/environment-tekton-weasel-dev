@@ -16,7 +16,11 @@ gitops:
   server: {{ .Requirements.cluster.gitServer | default "https://github.com" }}
   owner: ""
   webhook: {{ .Requirements.webhook | default "prow" | title | quote }}
-
+{{- if eq .Requirements.cluster.gitKind "bitbucketserver" }}
+  gitUrlPathPrefix: "/scm"
+{{- else }}
+  gitUrlPathPrefix: ""
+{{- end }}
 
   dev:
     server: ""
