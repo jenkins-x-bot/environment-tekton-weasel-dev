@@ -11,10 +11,13 @@ cluster:
 {{- end }}
 
 gitops:
+  versionStreamUrl: {{ .Requirements.versionStream.url }}
+  versionStreamRef: {{ .Requirements.versionStream.ref }}
+
   gitKind: {{ .Requirements.cluster.gitKind | default "github" }}
   gitName: {{ .Requirements.cluster.gitName | default "github" }}
   server: {{ .Requirements.cluster.gitServer | default "https://github.com" }}
-  owner: ""
+  owner: {{ .Requirements.cluster.environmentGitOwner }}
   webhook: {{ .Requirements.webhook | default "prow" | title | quote }}
 {{- if eq .Requirements.cluster.gitKind "bitbucketserver" }}
   gitUrlPathPrefix: "/scm"
@@ -42,12 +45,12 @@ gitops:
 
   staging:
     repo: "{{ .Environments.staging.repository }}"
-    owner: "{{ .Environments.staging.owner }}"
+    owner: "{{ .Environments.staging.owner | default .Requirements.cluster.environmentGitOwner }}"
     server: ""
 
   production:
     repo: "{{ .Environments.production.repository }}"
-    owner: "{{ .Environments.production.owner }}"
+    owner: "{{ .Environments.production.owner | default .Requirements.cluster.environmentGitOwner }}"
     server: ""
 
 storage:
