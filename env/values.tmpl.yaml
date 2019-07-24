@@ -11,8 +11,9 @@ cluster:
 {{- end }}
 
 gitops:
-  gitKind: github
-  server: https://github.com
+  gitKind: {{ .Requirements.cluster.gitKind | default "github" }}
+  gitName: {{ .Requirements.cluster.gitName | default "github" }}
+  server: {{ .Requirements.cluster.gitServer | default "https://github.com" }}
   owner: ""
   webhook: {{ .Requirements.webhook | default "prow" | title | quote }}
 
@@ -123,8 +124,8 @@ tekton:
     enabled: false
 
 JenkinsXGitHub:
-  username: "{{ .Parameters.pipelineUser.github.username }}"
-  password: "{{ .Parameters.pipelineUser.github.token }}"
+  username: "{{ .Parameters.pipelineUser.username }}"
+  password: "{{ .Parameters.pipelineUser.token }}"
 
 {{- if .Requirements.ingress.tls }}
 certmanager:
