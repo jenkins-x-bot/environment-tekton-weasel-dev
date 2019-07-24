@@ -12,10 +12,9 @@ dependencies:
   alias: lighthouse
   name: lighthouse
   repository: http://chartmuseum.jenkins-x.io
-  version: 0.0.49
+  version: 0.0.51
 - name: jenkins-x-platform
   repository: http://chartmuseum.jenkins-x.io
-  version: 2.0.752
 - condition: external-dns.enabled
   name: external-dns
   repository: https://charts.bitnami.com/bitnami
