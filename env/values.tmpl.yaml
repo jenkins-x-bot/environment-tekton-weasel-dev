@@ -1,11 +1,14 @@
 cluster:
-  domain: ""
-  namespaceSubDomain: ""
+  domain: {{ .Requirements.ingress.domain }}
+  namespace: {{ .Requirements.cluster.namespace | default "jx" }}
+  namespaceSubDomain: {{ .Requirements.ingress.namespaceSubDomain | default ".jx." }}
+  projectID: {{ .Requirements.cluster.project }}
+  zone:  {{ .Requirements.cluster.zone }}
   name: ""
-  projectID: ""
   serverUrl: ""
-  zone: ""
-  tls: false
+{{- if .Requirements.ingress.tls.enabled }}
+  tls: true
+{{- end }}
 
 gitops:
   gitKind: github
