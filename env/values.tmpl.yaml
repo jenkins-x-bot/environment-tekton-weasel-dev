@@ -11,6 +11,9 @@ cluster:
 {{- end }}
 
 gitops:
+  versionStreamUrl: {{ .Requirements.versionStream.url }}
+  versionStreamRef: {{ .Requirements.versionStream.ref }}
+
   gitKind: {{ .Requirements.cluster.gitKind | default "github" }}
   gitName: {{ .Requirements.cluster.gitName | default "github" }}
   server: {{ .Requirements.cluster.gitServer | default "https://github.com" }}
