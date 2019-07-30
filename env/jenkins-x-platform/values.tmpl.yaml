@@ -3,9 +3,6 @@ expose:
 
 JXBasicAuth: "{{ .Parameters.adminUser.username }}:{SHA}{{ .Parameters.adminUser.password | hashPassword }}"
 
-expose:
-  enabled: false
-
 cleanup:
   enabled: false
 
