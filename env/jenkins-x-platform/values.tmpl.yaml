@@ -116,8 +116,13 @@ PipelineSecrets:
 {{- if eq .Requirements.webhook "lighthouse" }}
 controllerbuild:
   enabled: true
-  env:
-    GIT_REPORTING: "true"
+  args:
+  - "controller"
+  - "build"
+  - "--git-reporting"
+  - "--batch-mode"
+  - "--git-credentials"
+  - "--verbose"
 {{- end }}
 
 
