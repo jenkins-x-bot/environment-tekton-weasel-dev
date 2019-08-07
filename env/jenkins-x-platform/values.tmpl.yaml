@@ -112,3 +112,12 @@ PipelineSecrets:
             User git
             IdentityFile /root/.ssh-git/ssh-key
             StrictHostKeyChecking no
+
+{{- if eq .Requirements.webhook "lighthouse" }}
+controllerbuild:
+  enabled: true
+  env:
+    GIT_REPORTING: "true"
+{{- end }}
+
+
