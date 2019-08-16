@@ -1,0 +1,9 @@
+adminUser:
+  password: vault:tekton-weasel/adminUser:password
+  username: admin
+enableDocker: false
+pipelineUser:
+  token: vault:tekton-weasel/pipelineUser:token
+  username: jenkins-x-bot
+prow:
+  hmacToken: vault:tekton-weasel/prow:hmacToken
