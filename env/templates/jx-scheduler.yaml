@@ -41,6 +41,7 @@ spec:
   policy:
     protectTested: true
   postsubmits:
+    replace: true
     entries:
     - agent: tekton
       branches:
@@ -67,7 +68,6 @@ spec:
       name: integration
       optional: false
       policy:
-        Replace: false
         requiredStatusChecks:
           contexts:
             entries:
