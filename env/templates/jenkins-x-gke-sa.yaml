@@ -1,7 +1,7 @@
 {{- if .Values.JenkinsXGKEServiceAccount }}
 apiVersion: v1
 data:
-  filename: {{ .Values.JenkinsXGKEServiceAccount.filename | quote }}
+  filename: {{ .Values.JenkinsXGKEServiceAccount.filename | b64enc | quote }}
   data: {{ .Values.JenkinsXGKEServiceAccount.data | quote }}
 kind: Secret
 metadata:
