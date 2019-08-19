@@ -11,4 +11,5 @@ spec:
   description: Imported application for jenkins-x/jx
   provider: https://github.com
   providerName: github
+  org: jenkins-x
   repo: jx
