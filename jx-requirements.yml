@@ -1,31 +1,39 @@
 cluster:
-  clusterName: ""
-  environmentGitOwner: ""
-  project: ""
+  clusterName: tekton-weasel
+  environmentGitOwner: jenkins-x
+  gitKind: github
+  gitName: github
+  gitServer: https://github.com
+  namespace: jx
+  project: jenkins-x-infra
   provider: gke
-  zone: ""
-gitops: false
+  zone: europe-west1-c
 environments:
 - key: dev
 - key: staging
 - key: production
+gitops: true
 ingress:
-  domain: ""
-  externalDNS: false
+  domain: jenkins-x.live
+  externalDNS: true
+  namespaceSubDomain: -jx.
   tls:
-    email: ""
-    enabled: false
-    production: false
+    email: jenkins-x@cloudbees.com
+    enabled: true
+    production: true
 kaniko: true
-secretStorage: local
+secretStorage: vault
 storage:
   logs:
-    enabled: false
-    url: ""
+    enabled: true
+    url: gs://jx-prod-logs
   reports:
     enabled: false
     url: ""
   repository:
     enabled: false
     url: ""
+versionStream:
+  ref: ""
+  url: ""
 webhook: prow
