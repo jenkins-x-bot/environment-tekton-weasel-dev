@@ -8,6 +8,7 @@ cluster:
   project: jenkins-x-infra
   provider: gke
   zone: europe-west1-c
+  vaultName: jx-vault-tekton-weasel
 environments:
 - key: dev
 - key: staging
