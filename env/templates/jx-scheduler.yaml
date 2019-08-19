@@ -4,6 +4,9 @@ metadata:
   creationTimestamp: null
   name: jx-scheduler
 spec:
+  plugins:
+    entries:
+      - labels
   postsubmits:
     replace: true
     entries:
