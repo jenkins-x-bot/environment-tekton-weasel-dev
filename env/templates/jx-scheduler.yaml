@@ -4,42 +4,9 @@ metadata:
   creationTimestamp: null
   name: jx-scheduler
 spec:
-  approve:
-    issueRequired: false
-    lgtmActsAsApprove: true
-    requireSelfApproval: true
-  merger:
-    blockerLabel: ""
-    maxGoroutines: 0
-    mergeMethod: merge
-    policy:
-      fromBranchProtection: true
-      optionalContexts: {}
-      requiredContexts: {}
-      requiredIfPresentContexts: {}
-      skipUnknownContexts: false
-    prStatusBaseUrl: ""
-    squashLabel: ""
-    targetUrl: http://deck{{ .Values.cluster.namespaceSubDomain }}{{ .Values.cluster.domain }}
   plugins:
     entries:
-    - approve
-    - assign
-    - blunderbuss
-    - help
-    - hold
-    - lgtm
-    - lifecycle
-    - size
-    - trigger
-    - wip
-    - heart
-    - cat
-    - dog
-    - pony
-    - override
-  policy:
-    protectTested: true
+      - labels
   postsubmits:
     replace: true
     entries:
@@ -56,6 +23,7 @@ spec:
       runIfChanged: ""
       skipBranches: {}
   presubmits:
+    replace: true
     entries:
     - agent: tekton
       alwaysRun: true
@@ -78,6 +46,7 @@ spec:
         labels:
           entries:
           - approved
+          - lgtm
         milestone: ""
         missingLabels:
           entries:
@@ -92,12 +61,3 @@ spec:
       runIfChanged: ""
       skipBranches: {}
       trigger: (?m)^/test( all| integration),?(\s+|$)
-  schedulerAgent:
-    agent: tekton
-  trigger:
-    ignoreOkToTest: false
-    joinOrgUrl: ""
-    onlyOrgMembers: false
-    trustedOrg: {{ .Values.gitops.owner }}
-  welcome:
-  - message_template: Welcome
