@@ -1,7 +1,6 @@
 apiVersion: jenkins.io/v1
 kind: Scheduler
 metadata:
-  creationTimestamp: null
   name: jx-scheduler
 spec:
   plugins:
@@ -14,40 +13,24 @@ spec:
       branches:
         entries:
         - master
-      cluster: ""
-      context: ""
-      labels: {}
-      maxConcurrency: 0
       name: release
-      report: false
-      runIfChanged: ""
-      skipBranches: {}
   presubmits:
     replace: true
     entries:
     - agent: tekton
       alwaysRun: true
-      branches: {}
-      cluster: ""
       context: integration
-      labels: {}
-      maxConcurrency: 0
-      mergeMethod: ""
       name: integration
-      optional: false
       policy:
         requiredStatusChecks:
           contexts:
             entries:
             - integration
       queries:
-      - excludedBranches: {}
-        includedBranches: {}
-        labels:
+      - labels:
           entries:
           - approved
           - lgtm
-        milestone: ""
         missingLabels:
           entries:
           - do-not-merge
@@ -55,35 +38,23 @@ spec:
           - do-not-merge/work-in-progress
           - needs-ok-to-test
           - needs-rebase
-        reviewApprovedRequired: false
       report: true
       rerunCommand: /test integration
-      runIfChanged: ""
-      skipBranches: {}
       trigger: (?m)^/test( all| integration),?(\s+|$)
     - agent: tekton
       alwaysRun: true
-      branches: {}
-      cluster: ""
       context: bdd
-      labels: {}
-      maxConcurrency: 0
-      mergeMethod: ""
       name: bdd
-      optional: false
       policy:
         requiredStatusChecks:
           contexts:
             entries:
-              - bdd
+            - bdd
       queries:
-        - excludedBranches: {}
-          includedBranches: {}
-          labels:
+        - labels:
             entries:
               - approved
               - lgtm
-          milestone: ""
           missingLabels:
             entries:
               - do-not-merge
@@ -91,9 +62,54 @@ spec:
               - do-not-merge/work-in-progress
               - needs-ok-to-test
               - needs-rebase
-          reviewApprovedRequired: false
       report: true
       rerunCommand: /test bdd
-      runIfChanged: ""
-      skipBranches: {}
       trigger: (?m)^/test( all| bdd),?(\s+|$)
+    - agent: tekton
+      alwaysRun: true
+      context: tekton
+      name: tekton
+      policy:
+        requiredStatusChecks:
+          contexts:
+            entries:
+            - tekton
+      queries:
+      - labels:
+        entries:
+         - approved
+         - lgtm
+        missingLabels:
+          entries:
+          - do-not-merge
+          - do-not-merge/hold
+          - do-not-merge/work-in-progress
+          - needs-ok-to-test
+          - needs-rebase
+      report: true
+      rerunCommand: /test lint
+      trigger: (?m)^/test( all| lint),?(\s+|$)
+    - agent: tekton
+      alwaysRun: true
+      context: bdd
+      name: lint
+      policy:
+        requiredStatusChecks:
+          contexts:
+            entries:
+            - lint
+      queries:
+      - labels:
+          entries:
+          - approved
+          - lgtm
+        missingLabels:
+          entries:
+          - do-not-merge
+          - do-not-merge/hold
+          - do-not-merge/work-in-progress
+          - needs-ok-to-test
+          - needs-rebase
+      report: true
+      rerunCommand: /test lint
+      trigger: (?m)^/test( all| lint),?(\s+|$)
