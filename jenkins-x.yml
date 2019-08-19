@@ -4,7 +4,7 @@ pipelineConfig:
     release:
       pipeline:
         agent:
-          image: warrenbailey/builder-go:wip100
+          image: warrenbailey/builder-go:wip101
         environment:
           - name: DEPLOY_NAMESPACE
             value: jx
@@ -91,7 +91,7 @@ pipelineConfig:
     pullRequest:
       pipeline:
         agent:
-          image: warrenbailey/builder-go:wip100
+          image: warrenbailey/builder-go:wip101
         stages:
           - name: pr
             steps:
