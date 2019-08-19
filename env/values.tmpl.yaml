@@ -151,3 +151,6 @@ certmanager:
   enabled: false
 {{- end }}
 {{- end }}
+
+
+JenkinsXBDD: vault:tekton-weasel/sa/jenkins-x-bdd:json
