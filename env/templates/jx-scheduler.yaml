@@ -6,7 +6,7 @@ metadata:
 spec:
   plugins:
     entries:
-      - labels
+      - label
   postsubmits:
     replace: true
     entries:
