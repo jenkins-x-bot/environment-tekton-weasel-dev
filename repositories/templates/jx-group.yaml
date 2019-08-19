@@ -8,5 +8,5 @@ spec:
     kind: Scheduler
     name: jx-scheduler
   repositories: 
-  - name: jx
+  - name: jenkins-x-jx
     kind: SourceRepository
