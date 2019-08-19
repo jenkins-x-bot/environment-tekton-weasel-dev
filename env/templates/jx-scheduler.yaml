@@ -72,6 +72,54 @@ spec:
           contexts:
             entries:
             - integration
+    - agent: tekton
+      alwaysRun: true
+      branches: {}
+      cluster: ""
+      context: tekton
+      labels: {}
+      maxConcurrency: 0
+      mergeMethod: ""
+      name: tekton
+      optional: false
+      policy:
+        Replace: false
+        requiredStatusChecks:
+          contexts:
+            entries:
+            - tekton
+    - agent: tekton
+      alwaysRun: true
+      branches: {}
+      cluster: ""
+      context: bdd
+      labels: {}
+      maxConcurrency: 0
+      mergeMethod: ""
+      name: bdd
+      optional: false
+      policy:
+        Replace: false
+        requiredStatusChecks:
+          contexts:
+            entries:
+            - bdd
+    - agent: tekton
+      alwaysRun: true
+      branches: {}
+      cluster: ""
+      context: lint
+      labels: {}
+      maxConcurrency: 0
+      mergeMethod: ""
+      name: lint
+      optional: false
+      policy:
+        Replace: false
+        requiredStatusChecks:
+          contexts:
+            entries:
+            - lint
       queries:
       - excludedBranches: {}
         includedBranches: {}
