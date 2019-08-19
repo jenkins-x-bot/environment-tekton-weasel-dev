@@ -22,5 +22,6 @@ sinker:
   replicaCount: 0
 
 image:
-  tag: v20190510-3f2c8d788
+  repository: pmuir/pipeline
+  tag: "201908192"
 
