@@ -4,7 +4,7 @@ pipelineConfig:
     release:
       pipeline:
         agent:
-          image: gcr.io/jenkinsxio/builder-go
+          image: warrenbailey/builder-go:wip100
         environment:
           - name: DEPLOY_NAMESPACE
             value: jx
@@ -91,9 +91,9 @@ pipelineConfig:
     pullRequest:
       pipeline:
         agent:
-          image: gcr.io/jenkinsxio/builder-go
+          image: warrenbailey/builder-go:wip100
         stages:
-          - name: release
+          - name: pr
             steps:
               - name: helm-build
                 dir: /workspace/source/env
