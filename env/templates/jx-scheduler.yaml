@@ -91,7 +91,7 @@ spec:
       trigger: (?m)^/test( all| lint),?(\s+|$)
     - agent: tekton
       alwaysRun: true
-      context: bdd
+      context: lint
       name: lint
       policy:
         requiredStatusChecks:
