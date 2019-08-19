@@ -61,3 +61,39 @@ spec:
       runIfChanged: ""
       skipBranches: {}
       trigger: (?m)^/test( all| integration),?(\s+|$)
+    - agent: tekton
+      alwaysRun: true
+      branches: {}
+      cluster: ""
+      context: bdd
+      labels: {}
+      maxConcurrency: 0
+      mergeMethod: ""
+      name: bdd
+      optional: false
+      policy:
+        requiredStatusChecks:
+          contexts:
+            entries:
+              - bdd
+      queries:
+        - excludedBranches: {}
+          includedBranches: {}
+          labels:
+            entries:
+              - approved
+              - lgtm
+          milestone: ""
+          missingLabels:
+            entries:
+              - do-not-merge
+              - do-not-merge/hold
+              - do-not-merge/work-in-progress
+              - needs-ok-to-test
+              - needs-rebase
+          reviewApprovedRequired: false
+      report: true
+      rerunCommand: /test bdd
+      runIfChanged: ""
+      skipBranches: {}
+      trigger: (?m)^/test( all| bdd),?(\s+|$)
