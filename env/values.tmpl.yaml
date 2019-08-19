@@ -154,6 +154,7 @@ certmanager:
 
 
 JenkinsXBDD: vault:tekton-weasel/sa/jenkins-x-bdd:json
+
 JenkinsXGHETestUser:
   username: vault:tekton-weasel/creds/jenkins-x-github-ent-test-user:username
   password: vault:tekton-weasel/creds/jenkins-x-github-ent-test-user:password # pragma: allowlist secret
@@ -165,3 +166,7 @@ TestJenkinsUser:
 JenkinsXGKEServiceAccount:
   filename: vault:tekton-weasel/sa/jenkins-x-sa:filename
   data: vault:tekton-weasel/sa/jenkins-x-sa:data
+
+JenkinsXGitHubTest:
+  userame: vault:tekton-weasel/creds/gh-test:username
+  password: vault:tekton-weasel/creds/gh-test:password # pragma: allowlist secret
