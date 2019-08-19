@@ -21,7 +21,8 @@ tillerNamespace: ""
 sinker:
   replicaCount: 0
 
-image:
-  repository: pmuir/pipeline
-  tag: "201908192"
+pipeline:
+  image:
+    repository: pmuir/pipeline
+    tag: "201908192"
 
