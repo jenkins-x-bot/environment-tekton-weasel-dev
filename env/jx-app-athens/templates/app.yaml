@@ -1,0 +1,13 @@
+apiVersion: jenkins.io/v1
+kind: App
+metadata:
+  annotations:
+    jenkins.io/chart-description: The Athens App for Jenkins X
+    jenkins.io/chart-repository: http://chartmuseum.jenkins-x.io
+  creationTimestamp: null
+  labels:
+    chart: jx-app-athens-0.0.17
+    jenkins.io/app-name: jx-app-athens
+    jenkins.io/app-version: 0.0.17
+  name: jx-app-athens-jx-app-athens
+spec: {}
