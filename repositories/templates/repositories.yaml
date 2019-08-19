@@ -5,7 +5,7 @@ metadata:
     owner: jenkins-x
     provider: github
     repository: jx
-  name: jx
+  name: jenkins-x-jx
   namespace: jx
 spec:
   description: Imported application for jenkins-x/jx
