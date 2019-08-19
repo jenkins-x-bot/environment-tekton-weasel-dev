@@ -7,4 +7,6 @@ spec:
     apiVersion: jenkins.io/v1
     kind: Scheduler
     name: jx-scheduler
-  repositories: ["jx"]
+  repositories: 
+  - name: jx
+    kind: SourceRepository
