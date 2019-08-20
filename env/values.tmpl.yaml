@@ -153,6 +153,14 @@ certmanager:
 {{- end }}
 
 
+tekton:
+  auth:
+    docker:
+      username: vault:tekton-weasel/creds/tekton-docker:username
+      password: vault:tekton-weasel/creds/tekton-docker:password # pragma: allowlist secret
+      url: https://index.docker.io/v1/
+
+
 JenkinsXBDD: vault:tekton-weasel/sa/jenkins-x-bdd:json
 
 JenkinsXGHETestUser:
