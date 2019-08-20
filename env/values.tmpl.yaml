@@ -168,5 +168,5 @@ JenkinsXGKEServiceAccount:
   data: vault:tekton-weasel/sa/jenkins-x-sa:data
 
 JenkinsXGitHubTest:
-  userame: vault:tekton-weasel/creds/gh-test:username
+  username: vault:tekton-weasel/creds/gh-test:username
   password: vault:tekton-weasel/creds/gh-test:password # pragma: allowlist secret
