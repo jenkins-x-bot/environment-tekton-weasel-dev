@@ -3,6 +3,8 @@ kind: Scheduler
 metadata:
   name: jx-scheduler
 spec:
+  merger:
+    mergeMethod: rebase
   plugins:
     entries:
       - label
