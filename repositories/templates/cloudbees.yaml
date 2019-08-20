@@ -5,22 +5,6 @@ metadata:
   labels:
     owner: cloudbees
     provider: github
-    repository: jxui-backend
-  name: cloudbees-jxui-backend
-  namespace: jx
-spec:
-  description: Imported application for cloudbees/jxui-backend
-  provider: https://github.com
-  providerName: github
-  org: cloudbees
-  repo: jxui-backend
----
-apiVersion: jenkins.io/v1
-kind: SourceRepository
-metadata:
-  labels:
-    owner: cloudbees
-    provider: github
     repository: jxui-backend-backup
   name: cloudbees-jxui-backend-backup
   namespace: jx
@@ -62,22 +46,6 @@ spec:
   providerName: github
   org: cloudbees
   repo: jxui-ts-client
----
-apiVersion: jenkins.io/v1
-kind: SourceRepository
-metadata:
-  labels:
-    owner: cloudbees
-    provider: github
-    repository: jxui-frontend
-  name: cloudbees-jxui-frontend
-  namespace: jx
-spec:
-  description: Imported application for cloudbees/jxui-frontend
-  provider: https://github.com
-  providerName: github
-  org: cloudbees
-  repo: jxui-frontend
 ---
 apiVersion: jenkins.io/v1
 kind: SourceRepository
