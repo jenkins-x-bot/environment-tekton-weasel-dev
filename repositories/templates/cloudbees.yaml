@@ -1,0 +1,112 @@
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: cloudbees
+    provider: github
+    repository: jxui-backend-backup
+  name: cloudbees-jxui-backend-backup
+  namespace: jx
+spec:
+  description: Imported application for cloudbees/jxui-backend-backup
+  provider: https://github.com
+  providerName: github
+  org: cloudbees
+  repo: jxui-backend-backup
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: cloudbees
+    provider: github
+    repository: cloudbees-jenkins-x-distro
+  name: cloudbees-cloudbees-jenkins-x-distro
+  namespace: jx
+spec:
+  description: Imported application for cloudbees/cloudbees-jenkins-x-distro
+  provider: https://github.com
+  providerName: github
+  org: cloudbees
+  repo: cloudbees-jenkins-x-distro
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: cloudbees
+    provider: github
+    repository: jxui-ts-client
+  name: cloudbees-jxui-ts-client
+  namespace: jx
+spec:
+  description: Imported application for cloudbees/jxui-ts-client
+  provider: https://github.com
+  providerName: github
+  org: cloudbees
+  repo: jxui-ts-client
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: cloudbees
+    provider: github
+    repository: jxui-frontend-backup
+  name: cloudbees-jxui-frontend-backup
+  namespace: jx
+spec:
+  description: Imported application for cloudbees/jxui-frontend-backup
+  provider: https://github.com
+  providerName: github
+  org: cloudbees
+  repo: jxui-frontend-backup
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: cloudbees
+    provider: github
+    repository: jx-tenant-service
+  name: cloudbees-jx-tenant-service
+  namespace: jx
+spec:
+  description: Imported application for cloudbees/jx-tenant-service
+  provider: https://github.com
+  providerName: github
+  org: cloudbees
+  repo: jx-tenant-service
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: cloudbees
+    provider: github
+    repository: jx-app-ui
+  name: cloudbees-jx-app-ui
+  namespace: jx
+spec:
+  description: Imported application for cloudbees/jx-app-ui
+  provider: https://github.com
+  providerName: github
+  org: cloudbees
+  repo: jx-app-ui
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: cloudbees
+    provider: github
+    repository: cb-app-slack
+  name: cloudbees-cb-app-slack
+  namespace: jx
+spec:
+  description: Imported application for cloudbees/cb-app-slack
+  provider: https://github.com
+  providerName: github
+  org: cloudbees
+  repo: cb-app-slack

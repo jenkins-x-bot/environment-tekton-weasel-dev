@@ -1,0 +1,448 @@
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: terraform-jx-templates-gke
+  name: jenkins-x-terraform-jx-templates-gke
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/terraform-jx-templates-gke
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: terraform-jx-templates-gke
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: jenkins-x-versions
+  name: jenkins-x-jenkins-x-versions
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/jenkins-x-versions
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: jenkins-x-versions
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: dex
+  name: jenkins-x-dex
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/dex
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: dex
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: lighthouse
+  name: jenkins-x-lighthouse
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/lighthouse
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: lighthouse
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: go-scm
+  name: jenkins-x-go-scm
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/go-scm
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: go-scm
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: dev-env
+  name: jenkins-x-dev-env
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/dev-env
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: dev-env
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: dev-env-base
+  name: jenkins-x-dev-env-base
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/dev-env-base
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: dev-env-base
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: updatebot
+  name: jenkins-x-updatebot
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/updatebot
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: updatebot
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: ext-java-code-quality
+  name: jenkins-x-ext-java-code-quality
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/ext-java-code-quality
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: ext-java-code-quality
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: jx
+  name: jenkins-x-jx
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/jx
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: jx
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: jx-datadog
+  name: jenkins-x-jx-datadog
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/jx-datadog
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: jx-datadog
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: jx-docs
+  name: jenkins-x-jx-docs
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/jx-docs
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: jx-docs
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: jx-tutorial
+  name: jenkins-x-jx-tutorial
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/jx-tutorial
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: jx-tutorial
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: jenkins-x-builders-base-image
+  name: jenkins-x-jenkins-x-builders-base-image
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/jenkins-x-builders-base-image
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: jenkins-x-builders-base-image
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: jenkins-x-builders-base
+  name: jenkins-x-jenkins-x-builders-base
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/jenkins-x-builders-base
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: jenkins-x-builders-base
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: jenkins-x-builders
+  name: jenkins-x-jenkins-x-builders
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/jenkins-x-builders
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: jenkins-x-builders
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: jenkins-x-builders-ml
+  name: jenkins-x-jenkins-x-builders-ml
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/jenkins-x-builders-ml
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: jenkins-x-builders-ml
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: jenkins-x-serverless-filerunner
+  name: jenkins-x-jenkins-x-serverless-filerunner
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/jenkins-x-serverless-filerunner
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: jenkins-x-serverless-filerunner
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: jenkins-x-serverless
+  name: jenkins-x-jenkins-x-serverless
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/jenkins-x-serverless
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: jenkins-x-serverless
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: homebrew-jx
+  name: jenkins-x-homebrew-jx
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/homebrew-jx
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: homebrew-jx
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: jenkins-x-image
+  name: jenkins-x-jenkins-x-image
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/jenkins-x-image
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: jenkins-x-image
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: jenkins-x-platform
+  name: jenkins-x-jenkins-x-platform
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/jenkins-x-platform
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: jenkins-x-platform
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: jx-ts-client
+  name: jenkins-x-jx-ts-client
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/jx-ts-client
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: jx-ts-client
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: sso-operator
+  name: jenkins-x-sso-operator
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/sso-operator
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: sso-operator
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: exposecontroller
+  name: jenkins-x-exposecontroller
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/exposecontroller
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: exposecontroller
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: bucketrepo
+  name: jenkins-x-bucketrepo
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/bucketrepo
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: bucketrepo
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: prow-pipeline-controller
+  name: jenkins-x-prow-pipeline-controller
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/prow-pipeline-controller
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: prow-pipeline-controller
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: test-infra
+  name: jenkins-x-test-infra
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/test-infra
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: test-infra
