@@ -85,22 +85,6 @@ metadata:
   labels:
     owner: cloudbees
     provider: github
-    repository: jx-app-ui
-  name: cloudbees-jx-app-ui
-  namespace: jx
-spec:
-  description: Imported application for cloudbees/jx-app-ui
-  provider: https://github.com
-  providerName: github
-  org: cloudbees
-  repo: jx-app-ui
----
-apiVersion: jenkins.io/v1
-kind: SourceRepository
-metadata:
-  labels:
-    owner: cloudbees
-    provider: github
     repository: cb-app-slack
   name: cloudbees-cb-app-slack
   namespace: jx
