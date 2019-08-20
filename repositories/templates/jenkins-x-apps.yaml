@@ -1,0 +1,240 @@
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-apps
+    provider: github
+    repository: jx-app-sonarqube
+  name: jenkins-x-apps-jx-app-sonarqube
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-apps/jx-app-sonarqube
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-apps
+  repo: jx-app-sonarqube
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-apps
+    provider: github
+    repository: jx-app-cheese
+  name: jenkins-x-apps-jx-app-cheese
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-apps/jx-app-cheese
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-apps
+  repo: jx-app-cheese
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-apps
+    provider: github
+    repository: jx-app-grafana
+  name: jenkins-x-apps-jx-app-grafana
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-apps/jx-app-grafana
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-apps
+  repo: jx-app-grafana
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-apps
+    provider: github
+    repository: jx-app-datadog
+  name: jenkins-x-apps-jx-app-datadog
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-apps/jx-app-datadog
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-apps
+  repo: jx-app-datadog
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-apps
+    provider: github
+    repository: jx-app-istio
+  name: jenkins-x-apps-jx-app-istio
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-apps/jx-app-istio
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-apps
+  repo: jx-app-istio
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-apps
+    provider: github
+    repository: jx-app-gitea
+  name: jenkins-x-apps-jx-app-gitea
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-apps/jx-app-gitea
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-apps
+  repo: jx-app-gitea
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-apps
+    provider: github
+    repository: jx-app-jenkins
+  name: jenkins-x-apps-jx-app-jenkins
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-apps/jx-app-jenkins
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-apps
+  repo: jx-app-jenkins
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-apps
+    provider: github
+    repository: jx-app-anchore
+  name: jenkins-x-apps-jx-app-anchore
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-apps/jx-app-anchore
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-apps
+  repo: jx-app-anchore
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-apps
+    provider: github
+    repository: jx-app-ambassador
+  name: jenkins-x-apps-jx-app-ambassador
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-apps/jx-app-ambassador
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-apps
+  repo: jx-app-ambassador
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-apps
+    provider: github
+    repository: jx-app-test-lifecycle
+  name: jenkins-x-apps-jx-app-test-lifecycle
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-apps/jx-app-test-lifecycle
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-apps
+  repo: jx-app-test-lifecycle
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-apps
+    provider: github
+    repository: jx-app-athens
+  name: jenkins-x-apps-jx-app-athens
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-apps/jx-app-athens
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-apps
+  repo: jx-app-athens
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-apps
+    provider: github
+    repository: jx-app-sso
+  name: jenkins-x-apps-jx-app-sso
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-apps/jx-app-sso
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-apps
+  repo: jx-app-sso
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-apps
+    provider: github
+    repository: jx-app-cert-manager
+  name: jenkins-x-apps-jx-app-cert-manager
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-apps/jx-app-cert-manager
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-apps
+  repo: jx-app-cert-manager
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-apps
+    provider: github
+    repository: jx-app-jacoco
+  name: jenkins-x-apps-jx-app-jacoco
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-apps/jx-app-jacoco
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-apps
+  repo: jx-app-jacoco
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-apps
+    provider: github
+    repository: jx-app-prometheus
+  name: jenkins-x-apps-jx-app-prometheus
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-apps/jx-app-prometheus
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-apps
+  repo: jx-app-prometheus

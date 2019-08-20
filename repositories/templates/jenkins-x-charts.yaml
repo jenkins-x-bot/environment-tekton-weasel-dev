@@ -1,0 +1,192 @@
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-charts
+    provider: github
+    repository: hey
+  name: jenkins-x-charts-hey
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-charts/hey
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-charts
+  repo: hey
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-charts
+    provider: github
+    repository: jenkins-x-minimal
+  name: jenkins-x-charts-jenkins-x-minimal
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-charts/jenkins-x-minimal
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-charts
+  repo: jenkins-x-minimal
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-charts
+    provider: github
+    repository: nexus
+  name: jenkins-x-charts-nexus
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-charts/nexus
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-charts
+  repo: nexus
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-charts
+    provider: github
+    repository: tekton
+  name: jenkins-x-charts-tekton
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-charts/tekton
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-charts
+  repo: tekton
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-charts
+    provider: github
+    repository: openshift-namespace-rbac-chart
+  name: jenkins-x-charts-openshift-namespace-rbac-chart
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-charts/openshift-namespace-rbac-chart
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-charts
+  repo: openshift-namespace-rbac-chart
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-charts
+    provider: github
+    repository: athens-proxy
+  name: jenkins-x-charts-athens-proxy
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-charts/athens-proxy
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-charts
+  repo: athens-proxy
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-charts
+    provider: github
+    repository: vault-operator
+  name: jenkins-x-charts-vault-operator
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-charts/vault-operator
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-charts
+  repo: vault-operator
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-charts
+    provider: github
+    repository: knative-build
+  name: jenkins-x-charts-knative-build
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-charts/knative-build
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-charts
+  repo: knative-build
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-charts
+    provider: github
+    repository: jx-build-templates
+  name: jenkins-x-charts-jx-build-templates
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-charts/jx-build-templates
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-charts
+  repo: jx-build-templates
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-charts
+    provider: github
+    repository: environment-controller
+  name: jenkins-x-charts-environment-controller
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-charts/environment-controller
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-charts
+  repo: environment-controller
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-charts
+    provider: github
+    repository: prow
+  name: jenkins-x-charts-prow
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-charts/prow
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-charts
+  repo: prow
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-charts
+    provider: github
+    repository: kubernetes-replicator
+  name: jenkins-x-charts-kubernetes-replicator
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-charts/kubernetes-replicator
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-charts
+  repo: kubernetes-replicator
