@@ -50,7 +50,7 @@ spec:
       context: ""
       labels: {}
       maxConcurrency: 0
-      name: promotion
+      name: release
       report: false
       runIfChanged: ""
       skipBranches: {}
@@ -60,18 +60,18 @@ spec:
       alwaysRun: true
       branches: {}
       cluster: ""
-      context: promotion-build
+      context: pr-build
       labels: {}
       maxConcurrency: 0
       mergeMethod: ""
-      name: promotion-build
+      name: pr-build
       optional: false
       policy:
         Replace: false
         requiredStatusChecks:
           contexts:
             entries:
-            - promotion-build
+            - pr-build
       queries:
       - excludedBranches: {}
         includedBranches: {}
