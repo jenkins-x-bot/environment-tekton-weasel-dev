@@ -18,3 +18,9 @@ dependencies:
 - name: jx-app-athens
   repository: http://chartmuseum.jenkins-x.io
   version: 0.0.17
+- name: jx-app-sso
+  repository: http://chartmuseum.jenkins-x.io
+  version: 0.0.14
+- name: jx-app-ui
+  repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
+  version: 0.0.792
