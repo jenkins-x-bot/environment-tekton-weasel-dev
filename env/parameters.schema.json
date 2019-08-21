@@ -62,23 +62,6 @@
         }
       }
     },
-    "sso": {
-      "type": "object",
-      "properties": {
-        "dashboardAuthID": {
-          "type": "string",
-          "title": "Dashboard auth id"
-        },
-        "dashboardAuthSecret": {	
-          "type": "string",	
-          "title": "Dashboard auth secret"	
-        },	
-        "dashboardAuthOrg": {	
-          "type": "string",	
-          "title": "Dashboard auth org"	
-        }
-      }
-    },
     "enableDocker": {
       "type": "boolean",
       "title": "Do you want to configure an external Docker Registry?",

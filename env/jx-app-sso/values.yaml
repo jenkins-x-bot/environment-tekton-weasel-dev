@@ -1,0 +1,12 @@
+sso-operator:
+  dex:
+    grpcHost: "dex.jx"
+dex:
+  domain: "dex-jx.jenkins-x.live"
+  connectors:
+    github:
+      config:
+        clientID: "{{ .Values.sso.dashboardAuthID | }}"
+        clientSecret: "{{ .Values.sso.dashboardAuthSecret }}" # pragma: allowlist secret
+        orgs:
+        - "{{ .Values.sso.dashboardAuthOrg }}"
