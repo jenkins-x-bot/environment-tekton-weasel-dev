@@ -178,3 +178,5 @@ JenkinsXGKEServiceAccount:
 JenkinsXGitHubTest:
   username: vault:tekton-weasel/creds/gh-test:username
   password: vault:tekton-weasel/creds/gh-test:password # pragma: allowlist secret
+
+GcsJenkinsXChartMuseumKey: vault:tekton-weasel/sa/chartmuseum-gcs:data
