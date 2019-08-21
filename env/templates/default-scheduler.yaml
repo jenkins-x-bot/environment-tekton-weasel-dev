@@ -78,6 +78,7 @@ spec:
         labels:
           entries:
           - approved
+          - updatebot
         milestone: ""
         missingLabels:
           entries:
