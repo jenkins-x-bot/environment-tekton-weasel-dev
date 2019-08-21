@@ -180,8 +180,3 @@ JenkinsXGitHubTest:
   password: vault:tekton-weasel/creds/gh-test:password # pragma: allowlist secret
 
 GcsJenkinsXChartMuseumKey: vault:tekton-weasel/sa/chartmuseum-gcs:data
-
-sso:
-  dashboardAuthID: vault:tekton-weasel/sso:authID
-  dashboardAuthSecret: vault:tekton-weasel/sso:authSecret # pragma: allowlist secret
-  dashboardAuthOrg: jenkins-x-dashboard
