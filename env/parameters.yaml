@@ -7,7 +7,3 @@ pipelineUser:
   username: jenkins-x-bot
 prow:
   hmacToken: vault:tekton-weasel/prow:hmacToken
-sso:
-  dashboardAuthID: vault:tekton-weasel/sso:authID
-  dashboardAuthSecret: vault:tekton-weasel/sso:authSecret # pragma: allowlist secret
-  dashboardAuthOrg: jenkins-x-dashboard
