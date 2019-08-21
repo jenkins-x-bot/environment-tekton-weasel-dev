@@ -1,0 +1,12 @@
+sso-operator:
+  dex:
+    grpcHost: "dex.jx"
+dex:
+  domain: "dex-jx.{{ .Requirements.ingress.domain }}"
+  connectors:
+    github:
+      config:
+        clientID: "{{ .Parameters.sso.dashboardAuthID }}"
+        clientSecret: "{{ .Parameters.sso.dashboardAuthSecret }}" # pragma: allowlist secret
+        orgs:
+        - "{{ .Parameters.sso.dashboardAuthOrg }}"
