@@ -1,0 +1,12 @@
+apiVersion: jenkins.io/v1
+kind: App
+metadata:
+  annotations:
+    jenkins.io/chart-description: A Helm chart for the Jenkins X SSO App
+    jenkins.io/chart-repository: http://chartmuseum.jenkins-x.io
+  creationTimestamp: null
+  labels:
+    jenkins.io/app-name: jx-app-sso
+    jenkins.io/app-version: 0.0.14
+  name: jx-app-sso
+spec: {}
