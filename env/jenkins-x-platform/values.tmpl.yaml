@@ -131,7 +131,14 @@ gcactivities:
     - "activities"
     - "--batch-mode"
     - "--pr-history-limit=30"
+  cronjob:
+    enabled: true
+    schedule: "0/30 * * * *"
   image:
     repository: gcr.io/jenkinsxio/builder-jx
     tag: 0.1.658
 
+gcpods:
+  cronjob:
+    enabled: true
+    schedule: "0/30 * * * *"
