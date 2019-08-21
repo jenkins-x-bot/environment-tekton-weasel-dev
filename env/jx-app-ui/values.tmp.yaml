@@ -2,5 +2,5 @@ ui:
   skipExposeService: true
   sso:
     certIssuerName: letsencrypt-prod
-    domain: jenkins-x.live
-    oidcIssuerUrl: "https://dex-jx.jenkins-x.live"
+    domain: "{{ .Requirements.ingress.domain }}"
+    oidcIssuerUrl: "https://dex-jx.{{ .Requirements.ingress.domain }}"
