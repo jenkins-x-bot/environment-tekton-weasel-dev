@@ -2,7 +2,7 @@ sso-operator:
   dex:
     grpcHost: "dex.jx"
 dex:
-  domain: "dex-jx.jenkins-x.live"
+  domain: "dex-jx.{{ .Requirements.ingress.domain }}"
   connectors:
     github:
       config:
