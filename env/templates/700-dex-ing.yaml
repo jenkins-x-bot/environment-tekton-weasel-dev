@@ -1,11 +1,9 @@
-{{- if .Values.prow.enabled }}
+{{- if .Values.sso.enabled }}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
-    nginx.ingress.kubernetes.io/auth-secret: jx-basic-auth #  pragma: allowlist secret
-    nginx.ingress.kubernetes.io/auth-type: basic
   name: dex
 spec:
   rules:
