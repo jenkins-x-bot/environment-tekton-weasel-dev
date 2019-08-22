@@ -18,7 +18,6 @@ spec:
   presubmits:
     replace: true
     entries:
-
     - agent: tekton
       alwaysRun: true
       context: static
@@ -28,6 +27,14 @@ spec:
           contexts:
             entries:
             - static
+            - tiller
+            - gitops
+            - tekton
+            - ng
+            - boot-local
+            - boot-vault
+            - boot-lh
+            - boot-lh-ghe
       queries:
       - labels:
           entries:
@@ -47,11 +54,6 @@ spec:
       alwaysRun: true
       context: tiller
       name: tiller
-      policy:
-        requiredStatusChecks:
-          contexts:
-            entries:
-            - tiller
       queries:
       - labels:
           entries:
@@ -71,11 +73,6 @@ spec:
       alwaysRun: true
       context: gitops
       name: gitops
-      policy:
-        requiredStatusChecks:
-          contexts:
-            entries:
-            - gitops
       queries:
       - labels:
           entries:
@@ -95,11 +92,6 @@ spec:
       alwaysRun: true
       context: tekton
       name: tekton
-      policy:
-        requiredStatusChecks:
-          contexts:
-            entries:
-            - tekton
       queries:
       - labels:
           entries:
@@ -157,11 +149,6 @@ spec:
       alwaysRun: true
       context: ng
       name: ng
-      policy:
-        requiredStatusChecks:
-          contexts:
-            entries:
-            - ng
       queries:
       - labels:
           entries:
@@ -257,11 +244,6 @@ spec:
       alwaysRun: true
       context: boot-local
       name: boot-local
-      policy:
-        requiredStatusChecks:
-          contexts:
-            entries:
-            - boot-local
       queries:
       - labels:
           entries:
@@ -281,11 +263,6 @@ spec:
       alwaysRun: true
       context: boot-vault
       name: boot-vault
-      policy:
-        requiredStatusChecks:
-          contexts:
-            entries:
-            - boot-vault
       queries:
       - labels:
           entries:
@@ -305,11 +282,6 @@ spec:
       alwaysRun: true
       context: boot-lh
       name: boot-lh
-      policy:
-        requiredStatusChecks:
-          contexts:
-            entries:
-            - boot-lh
       queries:
       - labels:
           entries:
@@ -329,11 +301,6 @@ spec:
       alwaysRun: true
       context: boot-lh-ghe
       name: boot-lh-ghe
-      policy:
-        requiredStatusChecks:
-          contexts:
-            entries:
-            - boot-lh-ghe
       queries:
       - labels:
           entries:
