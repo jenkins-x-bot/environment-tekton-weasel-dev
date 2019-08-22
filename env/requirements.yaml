@@ -21,6 +21,7 @@ dependencies:
 - name: jx-app-sso
   repository: http://chartmuseum.jenkins-x.io
   version: 0.0.14
-- name: jx-app-ui
-  repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
-  version: 0.0.792
+- name: jxui
+  alias: jx-app-ui
+  repository: https://charts.cloudbees.com/cjxd/cloudbees
+  version: 0.0.804
