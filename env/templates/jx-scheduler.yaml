@@ -79,9 +79,9 @@ spec:
             - tekton
       queries:
       - labels:
-        entries:
-         - approved
-         - lgtm
+          entries:
+           - approved
+           - lgtm
         missingLabels:
           entries:
           - do-not-merge
