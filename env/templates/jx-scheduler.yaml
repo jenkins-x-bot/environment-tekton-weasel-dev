@@ -29,6 +29,9 @@ spec:
           contexts:
             entries:
             - integration
+            - tekton
+            - bdd
+            - lint
       queries:
       - labels:
           entries:
@@ -48,11 +51,6 @@ spec:
       alwaysRun: true
       context: bdd
       name: bdd
-      policy:
-        requiredStatusChecks:
-          contexts:
-            entries:
-            - bdd
       queries:
         - labels:
             entries:
@@ -72,11 +70,6 @@ spec:
       alwaysRun: true
       context: tekton
       name: tekton
-      policy:
-        requiredStatusChecks:
-          contexts:
-            entries:
-            - tekton
       queries:
       - labels:
           entries:
@@ -96,11 +89,6 @@ spec:
       alwaysRun: true
       context: lint
       name: lint
-      policy:
-        requiredStatusChecks:
-          contexts:
-            entries:
-            - lint
       queries:
       - labels:
           entries:
