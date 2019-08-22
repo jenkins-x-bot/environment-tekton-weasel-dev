@@ -152,6 +152,8 @@ certmanager:
 {{- end }}
 {{- end }}
 
+sso:
+  enabled: false
 
 tekton:
   auth:
