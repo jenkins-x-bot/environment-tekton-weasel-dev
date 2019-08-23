@@ -1,0 +1,35 @@
+apiVersion: jenkins.io/v1
+kind: Scheduler
+metadata:
+  name: boot-config-scheduler
+spec:
+  plugins:
+    entries:
+      - label
+  presubmits:
+    replace: true
+    entries:
+    - agent: tekton
+      alwaysRun: true
+      context: bdd-local
+      name: bdd-local
+      policy:
+        requiredStatusChecks:
+          contexts:
+            entries:
+            - bdd-local
+      queries:
+      - labels:
+          entries:
+          - approved
+          - lgtm
+        missingLabels:
+          entries:
+          - do-not-merge
+          - do-not-merge/hold
+          - do-not-merge/work-in-progress
+          - needs-ok-to-test
+          - needs-rebase
+      report: true
+      rerunCommand: /test bdd-local
+      trigger: (?m)^/test( all| bdd-local),?(s+|$)
