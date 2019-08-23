@@ -33,6 +33,8 @@ spec:
             - pr
             - versions
             - --filter=\"*\"
+            - --images
+            - --excludes 'jetstack/cert-manager'
             - --batch-mode
             command:
             - jx
