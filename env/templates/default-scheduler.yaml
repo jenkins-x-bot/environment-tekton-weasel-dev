@@ -117,8 +117,8 @@ spec:
   periodics:
     entries:
     - name: periodic-jx-stale
+      cron: ""
       interval: 1h
-      decorate: false
       spec:
         containers:
         - image: gcr.io/k8s-prow/commenter:v20190528-0d7c4b53a
@@ -150,8 +150,8 @@ spec:
           secret:
             secretName: oauth-token
     - name: periodic-jx-close
+      cron: ""
       interval: 1h
-      decorate: false
       spec:
         containers:
         - image: gcr.io/k8s-prow/commenter:v20190528-0d7c4b53a
@@ -181,8 +181,8 @@ spec:
           secret:
             secretName: oauth-token
     - name: periodic-jx-rotten
+      cron: ""
       interval: 1h
-      decorate: false
       spec:
         containers:
         - image: gcr.io/k8s-prow/commenter:v20190528-0d7c4b53a
