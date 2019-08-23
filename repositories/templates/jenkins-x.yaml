@@ -446,3 +446,19 @@ spec:
   providerName: github
   org: jenkins-x
   repo: test-infra
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: jenkins-x-boot-config
+  name: jenkins-x-jenkins-x-boot-config
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/jenkins-x-boot-config
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: jenkins-x-boot-config
