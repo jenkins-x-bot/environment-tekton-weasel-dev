@@ -24,6 +24,13 @@ chartmuseum:
       name: gcs-jenkinsx-chartmuseum
   image:
     tag: v0.7.1
+  resources:
+    limits:
+      cpu: 500m
+      memory: 1024Mi
+    requests:
+      cpu: 320m
+      memory: 256Mi
 
 nexus:
     defaultAdminPassword: "{{ .Parameters.adminUser.password }}"
