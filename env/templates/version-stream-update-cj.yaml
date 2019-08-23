@@ -45,7 +45,7 @@ spec:
               value: jenkins-x@googlegroups.com
             - name: GIT_AUTHOR_NAME
               value: jenkins-x-bot
-            image: gcr.io/jenkinsxio/builder-go:0.1.658
+            image: gcr.io/jenkinsxio/builder-go:0.1.667
             imagePullPolicy: IfNotPresent
             name: jx-version-stream-update
             resources: {}
