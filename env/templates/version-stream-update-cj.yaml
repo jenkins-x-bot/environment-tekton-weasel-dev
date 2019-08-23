@@ -37,7 +37,8 @@ spec:
             - --excludes 'jetstack/cert-manager'
             - --batch-mode
             command:
-            - jx
+            - /bin/bash
+            - -c
             env:
             - name: GIT_COMMITTER_EMAIL
               value: jenkins-x@googlegroups.com
