@@ -18,26 +18,10 @@ spec:
         spec:
           containers:
           - args:
-            - step
-            - credential
-            - -s
-            - knative-git-user-pass
-            - -k
-            - password
-            - -f
-            - /builder/home/git-token
-            - "&&"
-            - jx
-            - step
-            - create
-            - pr
-            - versions
-            - --filter=\"*\"
-            - --images
-            - --excludes 'jetstack/cert-manager'
-            - --batch-mode
+            - "jx step credential -s knative-git-user-pass -k - password -f /builder/home/git-token && jx step create pr versions --filter=\"*\" --images --excludes 'jetstack/cert-manager' --batch-mode"
             command:
-            - jx
+            - /bin/bash
+            - -c
             env:
             - name: GIT_COMMITTER_EMAIL
               value: jenkins-x@googlegroups.com
