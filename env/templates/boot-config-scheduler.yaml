@@ -18,6 +18,7 @@ spec:
           contexts:
             entries:
             - bdd-local
+            - bdd-vault
       queries:
       - labels:
           entries:
@@ -33,3 +34,22 @@ spec:
       report: true
       rerunCommand: /test bdd-local
       trigger: (?m)^/test( all| bdd-local),?(s+|$)
+    - agent: tekton
+      alwaysRun: true
+      context: bdd-vault
+      name: bdd-vault
+      queries:
+      - labels:
+          entries:
+          - approved
+          - lgtm
+        missingLabels:
+          entries:
+          - do-not-merge
+          - do-not-merge/hold
+          - do-not-merge/work-in-progress
+          - needs-ok-to-test
+          - needs-rebase
+      report: true
+      rerunCommand: /test bdd-vault
+      trigger: (?m)^/test( all| bdd-vault),?(s+|$)
