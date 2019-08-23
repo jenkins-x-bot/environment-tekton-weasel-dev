@@ -18,6 +18,7 @@ spec:
         spec:
           containers:
           - args:
+            - jx
             - step
             - credential
             - -s
