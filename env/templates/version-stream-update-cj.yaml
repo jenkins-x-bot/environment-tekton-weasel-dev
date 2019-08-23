@@ -18,25 +18,7 @@ spec:
         spec:
           containers:
           - args:
-            - jx
-            - step
-            - credential
-            - -s
-            - knative-git-user-pass
-            - -k
-            - password
-            - -f
-            - /builder/home/git-token
-            - "&&"
-            - jx
-            - step
-            - create
-            - pr
-            - versions
-            - --filter=\"*\"
-            - --images
-            - --excludes 'jetstack/cert-manager'
-            - --batch-mode
+            - "jx step credential -s knative-git-user-pass -k - password -f /builder/home/git-token && jx step create pr versions --filter=\"*\" --images --excludes 'jetstack/cert-manager' --batch-mode"
             command:
             - /bin/bash
             - -c
