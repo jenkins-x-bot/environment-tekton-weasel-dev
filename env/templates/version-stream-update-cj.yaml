@@ -19,6 +19,16 @@ spec:
           containers:
           - args:
             - step
+            - credential
+            - -s
+            - knative-git-user-pass
+            - -k
+            - password
+            - -f
+            - /builder/home/git-token
+            - "&&"
+            - jx
+            - step
             - create
             - pr
             - versions
@@ -26,6 +36,13 @@ spec:
             - --batch-mode
             command:
             - jx
+            env:
+            - name: GIT_COMMITTER_EMAIL
+              value: jenkins-x@googlegroups.com
+            - name: GIT_AUTHOR_EMAIL
+              value: jenkins-x@googlegroups.com
+            - name: GIT_AUTHOR_NAME
+              value: jenkins-x-bot
             image: gcr.io/jenkinsxio/builder-go:0.1.658
             imagePullPolicy: IfNotPresent
             name: jx-version-stream-update
