@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   labels:
     app: gcs-copy
-  name: gcs-copy
+  name: copy-charts-index
 spec:
   concurrencyPolicy: Allow
   failedJobsHistoryLimit: 1
