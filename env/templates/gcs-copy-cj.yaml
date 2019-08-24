@@ -11,6 +11,24 @@ spec:
     spec:
       template:
         spec:
+          initContainers:
+          - name: prepare-chart-index
+            # curl the index.yaml file from chartmuseum before attempting a copy. This causes it to regenerate.
+            # No need to wait afterwards as the http call won't return until it's ready
+            image: gcr.io/jenkinsxio/builder-go:0.1.658
+            imagePullPolicy: IfNotPresent
+            env:
+              - name: URL
+                value: jenkins-x-chartmuseum:8080
+            command:
+              # Runs curl and only outputs errors
+              - curl
+            args:
+              - --show-error
+              - --silent
+              - --output
+              - /dev/null
+              - $(URL)
           containers:
           - command:
             - gcs-copy
@@ -25,7 +43,7 @@ spec:
               value: /gcs-jenkinsx-chartmuseum/gcs-chartmuseum.key.json
             image: jenkinsxio/gcs-copy:0.0.1
             imagePullPolicy: IfNotPresent
-            name: gcs-copy
+            name: copy-chart-index-to-gcs
             volumeMounts:
             - mountPath: /gcs-jenkinsx-chartmuseum
               name: gcs-jenkinsx-chartmuseum
