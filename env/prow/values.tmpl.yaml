@@ -12,10 +12,9 @@ buildnum:
   enabled: false
 pipelinerunner:
   enabled: "true"
-  args:
-  - controller
-  - pipelinerunner
-  - --use-meta-pipeline=false
+  image:
+    repository: gcr.io/jenkinsxio/builder-maven
+    tag: 0.1.672
 tillerNamespace: ""
 
 sinker:
@@ -23,6 +22,6 @@ sinker:
 
 pipeline:
   image:
-    repository: pmuir/pipeline
-    tag: "201908192"
+    repository: gcr.io/jenkinsxio/prow/pipeline
+    tag: v20190826-3976f61
 
