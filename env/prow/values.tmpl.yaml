@@ -11,6 +11,10 @@ user: "{{ .Parameters.pipelineUser.username }}"
 buildnum:
   enabled: false
 pipelinerunner:
+  args:
+  - controller
+  - pipelinerunner
+  - --use-meta-pipeline=false
   enabled: "true"
   image:
     repository: gcr.io/jenkinsxio/builder-maven
