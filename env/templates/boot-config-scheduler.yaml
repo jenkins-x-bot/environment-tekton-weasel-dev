@@ -31,6 +31,7 @@ spec:
           - do-not-merge/work-in-progress
           - needs-ok-to-test
           - needs-rebase
+          - needs-security-review
       report: true
       rerunCommand: /test bdd-local
       trigger: (?m)^/test( all| bdd-local),?(s+|$)
@@ -50,6 +51,7 @@ spec:
           - do-not-merge/work-in-progress
           - needs-ok-to-test
           - needs-rebase
+          - needs-security-review
       report: true
       rerunCommand: /test bdd-vault
       trigger: (?m)^/test( all| bdd-vault),?(s+|$)

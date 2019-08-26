@@ -47,6 +47,7 @@ spec:
           - do-not-merge/work-in-progress
           - needs-ok-to-test
           - needs-rebase
+          - needs-security-review
       report: true
       rerunCommand: /test static
       trigger: (?m)^/test( all| static),?(s+|$)
@@ -66,6 +67,7 @@ spec:
           - do-not-merge/work-in-progress
           - needs-ok-to-test
           - needs-rebase
+          - needs-security-review
       report: true
       rerunCommand: /test tiller
       trigger: (?m)^/test( all| tiller),?(s+|$)
@@ -85,6 +87,7 @@ spec:
           - do-not-merge/work-in-progress
           - needs-ok-to-test
           - needs-rebase
+          - needs-security-review
       report: true
       rerunCommand: /test gitops
       trigger: (?m)^/test( all| gitops),?(s+|$)
@@ -104,6 +107,7 @@ spec:
           - do-not-merge/work-in-progress
           - needs-ok-to-test
           - needs-rebase
+          - needs-security-review
       report: true
       rerunCommand: /test tekton
       trigger: (?m)^/test( all| tekton),?(s+|$)
@@ -123,6 +127,7 @@ spec:
           - do-not-merge/work-in-progress
           - needs-ok-to-test
           - needs-rebase
+          - needs-security-review
       report: true
       rerunCommand: /test ekstekton
       trigger: (?m)^/test( ekstekton),?(s+|$)
@@ -142,6 +147,7 @@ spec:
           - do-not-merge/work-in-progress
           - needs-ok-to-test
           - needs-rebase
+          - needs-security-review
       report: true
       rerunCommand: /test eksclassic
       trigger: (?m)^/test( eksclassic),?(s+|$)
@@ -161,6 +167,7 @@ spec:
           - do-not-merge/work-in-progress
           - needs-ok-to-test
           - needs-rebase
+          - needs-security-review
       report: true
       rerunCommand: /test ng
       trigger: (?m)^/test( all| ng),?(s+|$)
