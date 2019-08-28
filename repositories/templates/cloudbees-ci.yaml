@@ -1,0 +1,16 @@
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: cloudbees
+    provider: github
+    repository: jxui-frontend
+  name: jxui-frontend-ci
+  namespace: jx
+spec:
+  description: CI without merge to master triggers
+  provider: https://github.com
+  providerName: github
+  org: cloudbees
+  repo: jxui-frontend
