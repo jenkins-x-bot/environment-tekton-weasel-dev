@@ -1,7 +1,6 @@
-ui:
-  skipExposeService: true
-  sso:
-    create: true
-    certIssuerName: letsencrypt-prod
-    domain: "{{ .Requirements.ingress.domain }}"
-    oidcIssuerUrl: "https://dex-jx.{{ .Requirements.ingress.domain }}"
+skipExposeService: true
+sso:
+  create: true
+  certIssuerName: letsencrypt-prod
+  domain: "{{ .Requirements.ingress.domain }}"
+  oidcIssuerUrl: "https://dex-jx.{{ .Requirements.ingress.domain }}"
