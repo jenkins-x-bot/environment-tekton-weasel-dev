@@ -1,0 +1,7 @@
+dependencies:
+- host: github.com
+  owner: cloudbees
+  repo: jxui-frontend
+  url: https://github.com/cloudbees/jxui-frontend.git
+  version: 0.0.821
+  versionURL: ""
