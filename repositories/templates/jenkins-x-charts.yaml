@@ -21,6 +21,22 @@ metadata:
   labels:
     owner: jenkins-x-charts
     provider: github
+    repository: jxboot-resources
+  name: jenkins-x-charts-jxboot-resources
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-charts/jxboot-resources
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-charts
+  repo: jxboot-resources
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-charts
+    provider: github
     repository: jenkins-x-minimal
   name: jenkins-x-charts-jenkins-x-minimal
   namespace: jx
