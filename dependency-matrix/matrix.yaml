@@ -3,5 +3,5 @@ dependencies:
   owner: cloudbees
   repo: jxui-frontend
   url: https://github.com/cloudbees/jxui-frontend.git
-  version: 0.0.821
+  version: 0.0.822
   versionURL: ""
