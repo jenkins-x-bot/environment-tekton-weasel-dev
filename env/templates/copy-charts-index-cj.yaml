@@ -19,7 +19,7 @@ spec:
             imagePullPolicy: IfNotPresent
             env:
               - name: URL
-                value: jenkins-x-chartmuseum:8080
+                value: http://jenkins-x-chartmuseum:8080/index.yaml
             command:
               # Runs curl and only outputs errors
               - curl
