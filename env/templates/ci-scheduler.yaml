@@ -50,6 +50,8 @@ spec:
       runIfChanged: ""
       skipBranches: {}
       trigger: (?m)^/test( all| this),?(\s+|$)
+  postsubmits:
+    replace: true
   trigger:
     ignoreOkToTest: false
     joinOrgUrl: ""
