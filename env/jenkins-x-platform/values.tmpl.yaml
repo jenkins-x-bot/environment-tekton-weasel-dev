@@ -156,7 +156,7 @@ gcactivities:
     schedule: "0/30 * * * *"
   image:
     repository: gcr.io/jenkinsxio/builder-jx
-    tag: 0.1.658
+    tag: 0.1.699
 
 gcpods:
   cronjob:
