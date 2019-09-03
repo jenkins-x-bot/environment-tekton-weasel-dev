@@ -267,6 +267,25 @@ spec:
       rerunCommand: /test boot-local
       trigger: (?m)^/test( all| boot| boot-local),?(s+|$)
     - agent: tekton
+      alwaysRun: false
+      context: boot-jenkins
+      name: boot-jenkins
+      queries:
+      - labels:
+          entries:
+          - approved
+          - lgtm
+        missingLabels:
+          entries:
+          - do-not-merge
+          - do-not-merge/hold
+          - do-not-merge/work-in-progress
+          - needs-ok-to-test
+          - needs-rebase
+      report: true
+      rerunCommand: /test boot-jenkins
+      trigger: (?m)^/test( all| boot| boot-jenkins),?(s+|$)
+    - agent: tekton
       alwaysRun: true
       context: boot-vault
       name: boot-vault
@@ -342,6 +361,25 @@ spec:
       report: true
       rerunCommand: /test boot-lh-bs
       trigger: (?m)^/test( boot| boot-lh-bs| lighthouse),?(s+|$)
+    - agent: tekton
+      alwaysRun: false
+      context: boot-lh-gl
+      name: boot-lh-gl
+      queries:
+      - labels:
+          entries:
+          - approved
+          - lgtm
+        missingLabels:
+          entries:
+          - do-not-merge
+          - do-not-merge/hold
+          - do-not-merge/work-in-progress
+          - needs-ok-to-test
+          - needs-rebase
+      report: true
+      rerunCommand: /test boot-lh-gl
+      trigger: (?m)^/test( boot| boot-lh-gl| lighthouse),?(s+|$)
     - agent: tekton
       alwaysRun: false
       context: devpods
