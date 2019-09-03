@@ -128,4 +128,4 @@ spec:
               - needs-security-review
       report: true
       rerunCommand: /build images
-      trigger: (?m)(?^/(build images),?(\s+|$)
+      trigger: (?m)^/build images,?(\s+|$)
