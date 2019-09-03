@@ -3,6 +3,8 @@ kind: Scheduler
 metadata:
   name: jx-scheduler
 spec:
+  lgtm:
+    reviewActsAsLgtm: true
   merger:
     mergeMethod: rebase
   plugins:
