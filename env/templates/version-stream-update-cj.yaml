@@ -25,7 +25,6 @@ spec:
             - --filter=*
             - --images
             - --excludes=jetstack/cert-manager
-            - --excludes=jenkins-x/lighthouse
             - --batch-mode
             command:
             - jx
