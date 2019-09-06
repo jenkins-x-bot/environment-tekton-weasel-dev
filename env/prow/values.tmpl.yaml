@@ -23,9 +23,3 @@ tillerNamespace: ""
 
 sinker:
   replicaCount: 0
-
-pipeline:
-  image:
-    repository: gcr.io/jenkinsxio/prow/pipeline
-    tag: v20190826-3976f61
-
