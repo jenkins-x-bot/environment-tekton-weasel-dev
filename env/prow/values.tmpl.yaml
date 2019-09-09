@@ -14,7 +14,7 @@ pipelinerunner:
   args:
   - controller
   - pipelinerunner
-  - --use-meta-pipeline=true
+  - --use-meta-pipeline=false
   enabled: "true"
   image:
     repository: gcr.io/jenkinsxio/builder-maven
