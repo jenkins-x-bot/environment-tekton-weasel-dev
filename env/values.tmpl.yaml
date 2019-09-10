@@ -182,3 +182,15 @@ JenkinsXGitHubTest:
   password: vault:tekton-weasel/creds/gh-test:password # pragma: allowlist secret
 
 GcsJenkinsXChartMuseumKey: vault:tekton-weasel/sa/chartmuseum-gcs:data
+
+arcalos:
+  adminUsername: vault:tekton-weasel/arcalos:admin-username
+  dashboardAuthId: vault:tekton-weasel/arcalos:dashboard-auth-id
+  dashboardAuthSecret: vault:tekton-weasel/arcalos:dashboard-auth-secret # pragma: allowlist secret
+  domainIssuerPassword: vault:tekton-weasel/arcalos:domain-issuer-password # pragma: allowlist secret
+  domainIssuerUsername: vault:tekton-weasel/arcalos:domain-issuer-username
+  pipelineGithubUser: vault:tekton-weasel/arcalos:pipeline-github-user
+  pipelineGithubToken: vault:tekton-weasel/arcalos:pipeline-github-token
+  gitOwner: jenkins-x-bot-test
+  prowHMACToken: vault:tekton-weasel/arcalos:prow-hmac-token
+  ciSA: vault:tekton-weasel/arcalos/sa:json
