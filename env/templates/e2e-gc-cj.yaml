@@ -21,7 +21,7 @@ spec:
             - step
             - e2e
             - gc
-            - --project-id=jenkins-x-bdd2
+            - --project-id=jenkins-x-bdd3
             - --batch-mode
             command:
             - jx
