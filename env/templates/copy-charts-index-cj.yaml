@@ -15,7 +15,7 @@ spec:
           - name: prepare-chart-index
             # curl the index.yaml file from chartmuseum before attempting a copy. This causes it to regenerate.
             # No need to wait afterwards as the http call won't return until it's ready
-            image: gcr.io/jenkinsxio/builder-go:0.1.658
+            image: gcr.io/jenkinsxio/builder-go:0.1.754
             imagePullPolicy: IfNotPresent
             env:
               - name: URL
