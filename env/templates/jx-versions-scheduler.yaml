@@ -27,7 +27,6 @@ spec:
           contexts:
             entries:
             - static
-            - tiller
             - gitops
             - tekton
             - ng
@@ -52,7 +51,7 @@ spec:
       rerunCommand: /test static
       trigger: (?m)^/test( all| static),?(s+|$)
     - agent: tekton
-      alwaysRun: true
+      alwaysRun: false
       context: tiller
       name: tiller
       queries:
