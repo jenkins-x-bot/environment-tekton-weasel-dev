@@ -191,6 +191,7 @@ arcalos:
   domainIssuerUsername: vault:tekton-weasel/arcalos:domain-issuer-username
   pipelineGithubUser: vault:tekton-weasel/arcalos:pipeline-github-user
   pipelineGithubToken: vault:tekton-weasel/arcalos:pipeline-github-token
-  gitOwner: jenkins-x-bot-test
+  pipelineGithubEmail: vault:tekton-weasel/arcalos:pipeline-github-email
+  gitOwner: vault:tekton-weasel/arcalos:git-owner
   prowHMACToken: vault:tekton-weasel/arcalos:prow-hmac-token
   ciSA: vault:tekton-weasel/arcalos/sa:json
