@@ -238,3 +238,19 @@ spec:
   providerName: github
   org: jenkins-x-apps
   repo: jx-app-prometheus
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-apps
+    provider: github
+    repository: jx-app-kuberhealthy
+  name: jenkins-x-apps-jx-app-kuberhealthy
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-apps/jx-app-kuberhealthy
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-apps
+  repo: jx-app-kuberhealthy
