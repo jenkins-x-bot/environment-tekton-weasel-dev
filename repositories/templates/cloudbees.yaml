@@ -110,3 +110,19 @@ spec:
   providerName: github
   org: cloudbees
   repo: arcalos
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: cloudbees
+    provider: github
+    repository: jenkins-x-github-app
+  name: cloudbees-jx-github-app
+  namespace: jx
+spec:
+  description: Imported application for cloudbees/jenkins-x-github-app
+  provider: https://github.com
+  providerName: github
+  org: cloudbees
+  repo: jenkins-x-github-app
