@@ -22,7 +22,8 @@ spec:
             - create
             - pr
             - versions
-            - --repo https://github.com/cloudbees/arcalos-jenkins-x-versions
+            - --repo
+            - https://github.com/cloudbees/arcalos-jenkins-x-versions
             - --filter=*
             - --images
             - --excludes=jetstack/cert-manager
