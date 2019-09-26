@@ -34,6 +34,7 @@ spec:
             - tekton
             - bdd
             - lint
+            - boot-vault
       queries:
       - labels:
           entries:
@@ -130,7 +131,7 @@ spec:
       rerunCommand: /build images
       trigger: (?m)^/build images,?(\s+|$)
     - agent: tekton
-      alwaysRun: false
+      alwaysRun: true
       context: boot-vault
       name: boot-vault
       queries:
