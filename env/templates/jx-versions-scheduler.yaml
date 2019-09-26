@@ -27,9 +27,7 @@ spec:
           contexts:
             entries:
             - static
-            - gitops
             - tekton
-            - ng
             - boot-local
             - boot-vault
             - boot-lh
@@ -69,9 +67,9 @@ spec:
           - needs-security-review
       report: true
       rerunCommand: /test tiller
-      trigger: (?m)^/test( all| tiller),?(s+|$)
+      trigger: (?m)^/test( tiller),?(s+|$)
     - agent: tekton
-      alwaysRun: true
+      alwaysRun: false
       context: gitops
       name: gitops
       queries:
@@ -89,7 +87,7 @@ spec:
           - needs-security-review
       report: true
       rerunCommand: /test gitops
-      trigger: (?m)^/test( all| gitops),?(s+|$)
+      trigger: (?m)^/test( gitops),?(s+|$)
     - agent: tekton
       alwaysRun: true
       context: tekton
@@ -151,7 +149,7 @@ spec:
       rerunCommand: /test eksclassic
       trigger: (?m)^/test( eksclassic),?(s+|$)
     - agent: tekton
-      alwaysRun: true
+      alwaysRun: false
       context: ng
       name: ng
       queries:
@@ -169,7 +167,7 @@ spec:
           - needs-security-review
       report: true
       rerunCommand: /test ng
-      trigger: (?m)^/test( all| ng),?(s+|$)
+      trigger: (?m)^/test( ng),?(s+|$)
     - agent: tekton
       alwaysRun: false
       context: static-gke-us-east1-b
@@ -283,7 +281,7 @@ spec:
           - needs-rebase
       report: true
       rerunCommand: /test boot-jenkins
-      trigger: (?m)^/test( all| boot| boot-jenkins),?(s+|$)
+      trigger: (?m)^/test( boot| boot-jenkins),?(s+|$)
     - agent: tekton
       alwaysRun: true
       context: boot-vault
