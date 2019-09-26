@@ -118,7 +118,7 @@ metadata:
     owner: cloudbees
     provider: github
     repository: jenkins-x-github-app
-  name: cloudbees-jx-github-app
+  name: cloudbees-jenkins-x-github-app
   namespace: jx
 spec:
   description: Imported application for cloudbees/jenkins-x-github-app
