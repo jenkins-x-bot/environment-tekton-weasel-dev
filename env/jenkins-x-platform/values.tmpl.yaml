@@ -143,13 +143,6 @@ controllerbuild:
   - "--batch-mode"
   - "--git-credentials"
   - "--verbose"
-{{- else }}
-# Remove this else once https://github.com/jenkins-x/jx/pull/5651 is merged/released/in version stream
-controllerbuild:
-  enabled: true
-  image:
-    repository: gcr.io/jenkinsxio/builder-go
-    tag: 0.0.0-SNAPSHOT-PR-5651-18
 {{- end }}
 
 gcactivities:
