@@ -462,3 +462,19 @@ spec:
   providerName: github
   org: jenkins-x
   repo: jenkins-x-boot-config
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: status-badge
+  name: jenkins-x-status-badge
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/status-badge
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: status-badge
