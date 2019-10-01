@@ -26,7 +26,7 @@ dependencies:
   version: 1.0.14
 - name: jx-app-statusbadge
   repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
-  version: 0.0.2
+  version: 0.0.7
   condition: jx-app-statusbadge.enabled
   alias: jx-app-statusbadge
 - alias: ui

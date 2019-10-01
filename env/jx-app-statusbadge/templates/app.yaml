@@ -6,8 +6,8 @@ metadata:
     jenkins.io/chart-repository: http://chartmuseum.jenkins-x.io
   creationTimestamp: null
   labels:
-    chart: jx-app-statusbadge-0.0.2
+    chart: jx-app-statusbadge-0.0.7
     jenkins.io/app-name: jx-app-statusbadge
-    jenkins.io/app-version: 0.0.2
+    jenkins.io/app-version: 0.0.7
   name: jx-app-statusbadge-jx-app-statusbadge
 spec: {}
