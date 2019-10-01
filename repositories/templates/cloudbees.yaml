@@ -117,6 +117,22 @@ metadata:
   labels:
     owner: cloudbees
     provider: github
+    repository: arcalosui-frontend
+  name: cloudbees-arcalosui-frontend
+  namespace: jx
+spec:
+  description: Imported application for cloudbees/arcalos-frontendui
+  provider: https://github.com
+  providerName: github
+  org: cloudbees
+  repo: arcalosui-frontend
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: cloudbees
+    provider: github
     repository: arcalos-jenkins-x-versions
   name: cloudbees-arcalos-jenkins-x-versions
   namespace: jx
