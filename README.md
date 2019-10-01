@@ -1,4 +1,4 @@
-![Build Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fstatusbadge-jx.jenkins-x.live%2Fjx)
+![Build Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fstatusbadge-jx.jenkins-x.live%2Fenvironment-tekton-weasel-dev)
 
 ## Jenkins X Boot Configuration
 
