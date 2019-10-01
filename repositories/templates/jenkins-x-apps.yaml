@@ -254,3 +254,19 @@ spec:
   providerName: github
   org: jenkins-x-apps
   repo: jx-app-kuberhealthy
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x-apps
+    provider: github
+    repository: jx-app-statusbadge
+  name: jenkins-x-apps-jx-app-statusbadge
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x-apps/jx-app-statusbadge
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x-apps
+  repo: jx-app-statusbadge
