@@ -1,4 +1,5 @@
 enabled: true
 
-service:
-  serviceAccount: tekton-bot
+status-badge:
+  service:
+    serviceAccount: tekton-bot
