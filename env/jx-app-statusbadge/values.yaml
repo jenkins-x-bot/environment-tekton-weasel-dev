@@ -1,2 +1,4 @@
 enabled: true
 
+service:
+  serviceAccount: tekton-bot
