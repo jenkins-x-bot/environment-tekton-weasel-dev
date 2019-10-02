@@ -143,6 +143,44 @@ controllerbuild:
   - "--batch-mode"
   - "--git-credentials"
   - "--verbose"
+{{- else }}
+controllerbuild:
+  enabled: true
+  role:
+    enabled: true
+    rules:
+      - apiGroups:
+          - jenkins.io
+        resources:
+          - pipelineactivities
+          - pipelinestructures
+          - sourcerepositories
+        verbs:
+          - list
+          - get
+          - watch
+          - create
+          - update
+          - patch
+      - apiGroups:
+          - jenkins.io
+        resources:
+          - environments
+          - plugins
+        verbs:
+          - get
+          - list
+          - watch
+      - apiGroups:
+          - ""
+        resources:
+          - pods
+          - pods/log
+          - secrets
+        verbs:
+          - get
+          - list
+          - watch
 {{- end }}
 
 gcactivities:
