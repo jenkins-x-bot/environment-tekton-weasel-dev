@@ -133,6 +133,22 @@ metadata:
   labels:
     owner: cloudbees
     provider: github
+    repository: arcalos-boot-config
+  name: cloudbees-arcalos-boot-config
+  namespace: jx
+spec:
+  description: Imported application for cloudbees/arcalos-boot-config
+  provider: https://github.com
+  providerName: github
+  org: cloudbees
+  repo: arcalos-boot-config
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: cloudbees
+    provider: github
     repository: arcalos-jenkins-x-versions
   name: cloudbees-arcalos-jenkins-x-versions
   namespace: jx
