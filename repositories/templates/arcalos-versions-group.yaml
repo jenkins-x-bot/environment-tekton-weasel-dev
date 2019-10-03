@@ -10,3 +10,5 @@ spec:
   repositories: 
   - name: cloudbees-arcalos-jenkins-x-versions
     kind: SourceRepository
+  - name: cloudbees-arcalos-boot-config
+    kind: SourceRepository
