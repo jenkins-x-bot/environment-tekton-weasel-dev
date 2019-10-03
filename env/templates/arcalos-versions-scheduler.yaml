@@ -14,7 +14,7 @@ spec:
         entries:
         - master
       name: release
-      context: ""
+      context: arcalos
   presubmits:
     replace: true
     entries:
