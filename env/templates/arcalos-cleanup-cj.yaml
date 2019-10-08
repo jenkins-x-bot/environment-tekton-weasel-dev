@@ -15,7 +15,6 @@ data:
 
     ./cleanup.sh
 ---
-
 apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
@@ -61,8 +60,8 @@ spec:
                 secretName: arcalos-secret
             - name: cleanup-config
               configMap:
-              defaultMode: 0700
-              name: arcalos-cleanup-config
+                defaultMode: 0700
+                name: arcalos-cleanup-config
           dnsPolicy: ClusterFirst
           restartPolicy: Never
           schedulerName: default-scheduler
