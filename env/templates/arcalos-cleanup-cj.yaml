@@ -8,7 +8,7 @@ data:
     #!/bin/bash
     jx step git credentials
    
-    gcloud auth activate-service-account --key-file /secret/sa/ci_bot.json
+    gcloud auth activate-service-account --key-file $GKE_SA_KEY_FILE
  
     git clone https://github.com/cloudbees/arcalos
     cd arcalos
