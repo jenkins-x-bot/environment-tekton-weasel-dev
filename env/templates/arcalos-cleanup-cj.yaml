@@ -47,9 +47,9 @@ spec:
             terminationMessagePolicy: File
             volumeMounts:
               - name: sa
-                mountPath: /secret
+                mountPath: /secret/sa/ci_bot.json
                 readOnly: true
-                subPath: ci_sa
+                subPath: ci_bot.json
               - name: cleanup-config
                 mountPath: /bin/entrypoint.sh
                 readOnly: true
@@ -58,6 +58,9 @@ spec:
             - name: sa
               secret:
                 secretName: arcalos-secret
+                items:
+                - key: ci_sa
+                  path: ci_bot.json
             - name: cleanup-config
               configMap:
                 defaultMode: 0700
