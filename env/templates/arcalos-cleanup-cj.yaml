@@ -51,7 +51,7 @@ spec:
                 mountPath: /secret
                 readOnly: true
                 subPath: ci_sa
-              - name: upgrade-volume
+              - name: cleanup-config
                 mountPath: /bin/entrypoint.sh
                 readOnly: true
                 subPath: entrypoint.sh
