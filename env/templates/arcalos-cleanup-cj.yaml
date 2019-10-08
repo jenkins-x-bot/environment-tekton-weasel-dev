@@ -34,7 +34,7 @@ spec:
             release: jx
         spec:
           containers:
-            command:
+          - command:
             - /bin/entrypoint.sh
             env:
             - name: GKE_SA_KEY_FILE
