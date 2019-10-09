@@ -7,13 +7,14 @@ data:
   entrypoint.sh: |-
     #!/bin/bash
     jx step git credentials
-   
+    git config --global credential.helper store 
+ 
     gcloud auth activate-service-account --key-file $GKE_SA_KEY_FILE
  
     git clone https://github.com/cloudbees/arcalos
-    cd arcalos
-
-    ./cleanup.sh
+    pushd arcalos
+      ./cleanup.sh
+    popd
 ---
 apiVersion: batch/v1beta1
 kind: CronJob
@@ -39,6 +40,8 @@ spec:
             env:
             - name: GKE_SA_KEY_FILE
               value: "/secret/sa/ci_bot.json"
+            - name: XDG_CONFIG_HOME
+              value: "/root"
             image: gcr.io/jenkinsxio/builder-go:2.0.838-196
             imagePullPolicy: IfNotPresent
             name: arcalos-cleanup
