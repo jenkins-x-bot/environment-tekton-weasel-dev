@@ -1,0 +1,57 @@
+apiVersion: jenkins.io/v1
+kind: Scheduler
+metadata:
+  name: arcalos-boot-config-scheduler
+spec:
+  plugins:
+    entries:
+      - label
+  postsubmits:
+    replace: true
+    entries:
+    - agent: tekton
+      branches:
+        entries:
+        - master
+      name: release
+      context: release
+  presubmits:
+    replace: true
+    entries:
+    - agent: tekton
+      alwaysRun: true
+      context: arcalos
+      name: arcalos
+      policy:
+        requiredStatusChecks:
+          contexts:
+            entries:
+            - arcalos
+      queries:
+      - labels:
+          entries:
+          - approved
+          - lgtm
+        missingLabels:
+          entries:
+          - do-not-merge
+          - do-not-merge/hold
+          - do-not-merge/work-in-progress
+          - needs-ok-to-test
+          - needs-rebase
+          - needs-security-review
+      - labels:
+          entries:
+          - updatebot
+        milestone: ""
+        missingLabels:
+          entries:
+          - do-not-merge
+          - do-not-merge/hold
+          - do-not-merge/work-in-progress
+          - needs-ok-to-test
+          - needs-rebase
+          - needs-security-review
+      report: true
+      rerunCommand: /test arcalos
+      trigger: (?m)^/test( all| arcalos),?(s+|$)

@@ -1,12 +1,12 @@
 apiVersion: jenkins.io/v1
 kind: SourceRepositoryGroup
 metadata:
-  name: arcalos-versions-group
+  name: arcalos-boot-config-group
 spec:
   scheduler:
     apiVersion: jenkins.io/v1
     kind: Scheduler
-    name: arcalos-versions-scheduler
+    name: arcalos-boot-config-scheduler
   repositories: 
-  - name: cloudbees-arcalos-jenkins-x-versions
+  - name: cloudbees-arcalos-boot-config
     kind: SourceRepository
