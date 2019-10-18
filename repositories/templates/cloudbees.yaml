@@ -169,7 +169,7 @@ metadata:
   name: cloudbees-lighthouse-githubapp
   namespace: jx
 spec:
-  description: Imported application for cloudbees/jenkins-x-github-app
+  description: Imported application for cloudbees/lighthouse-githubapp
   provider: https://github.com
   providerName: github
   org: cloudbees
