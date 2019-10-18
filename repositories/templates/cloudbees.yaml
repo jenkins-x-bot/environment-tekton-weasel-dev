@@ -165,12 +165,12 @@ metadata:
   labels:
     owner: cloudbees
     provider: github
-    repository: jenkins-x-github-app
-  name: cloudbees-jenkins-x-github-app
+    repository: lighthouse-githubapp
+  name: cloudbees-lighthouse-githubapp
   namespace: jx
 spec:
   description: Imported application for cloudbees/jenkins-x-github-app
   provider: https://github.com
   providerName: github
   org: cloudbees
-  repo: jenkins-x-github-app
+  repo: lighthouse-githubapp
