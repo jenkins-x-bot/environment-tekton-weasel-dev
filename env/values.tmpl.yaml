@@ -18,6 +18,11 @@ cluster:
   tls: true
 {{- end }}
 
+netrc: |-
+  machine github.com
+    login "{{ .Parameters.pipelineUser.username }}"
+    password "{{ .Parameters.pipelineUser.token }}"
+
 gitops:
   versionStreamUrl: {{ .Requirements.versionStream.url }}
   versionStreamRef: {{ .Requirements.versionStream.ref }}
