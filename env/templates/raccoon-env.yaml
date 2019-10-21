@@ -1,0 +1,15 @@
+apiVersion: jenkins.io/v1
+kind: Environment
+metadata:
+  name: raccoon
+spec:
+  kind: Permanent
+  label: raccoon
+  namespace: jx
+  order: 100
+  previewGitInfo:
+    user: {}
+  promotionStrategy: Auto
+  source:
+    ref: master
+    url: "https://github.com/arcalos-environments/environment-raccoonshimmer-dev.git"
