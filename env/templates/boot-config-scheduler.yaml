@@ -27,7 +27,6 @@ spec:
           contexts:
             entries:
             - bdd-local
-            - bdd-vault
       queries:
       - labels:
           entries:
