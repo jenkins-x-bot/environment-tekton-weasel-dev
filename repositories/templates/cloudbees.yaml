@@ -181,12 +181,12 @@ metadata:
   labels:
     owner: cloudbees
     provider: github
-    repository: repository-controller
-  name: cloudbees-repository-controller
+    repository: jx-repository-controller
+  name: cloudbees-jx-repository-controller
   namespace: jx
 spec:
-  description: Imported application for cloudbees/repository-controller
+  description: Imported application for cloudbees/jx-repository-controller
   provider: https://github.com
   providerName: github
   org: cloudbees
-  repo: repository-controller
+  repo: jx-repository-controller
