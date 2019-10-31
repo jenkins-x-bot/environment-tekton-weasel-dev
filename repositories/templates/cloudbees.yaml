@@ -174,3 +174,19 @@ spec:
   providerName: github
   org: cloudbees
   repo: lighthouse-githubapp
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: cloudbees
+    provider: github
+    repository: repository-controller
+  name: cloudbees-repository-controller
+  namespace: jx
+spec:
+  description: Imported application for cloudbees/repository-controller
+  provider: https://github.com
+  providerName: github
+  org: cloudbees
+  repo: repository-controller
