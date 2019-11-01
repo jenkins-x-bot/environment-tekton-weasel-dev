@@ -200,3 +200,7 @@ arcalos:
   gitOwner: vault:tekton-weasel/arcalos:git-owner
   prowHMACToken: vault:tekton-weasel/arcalos:prow-hmac-token
   ciSA: vault:tekton-weasel/arcalos/sa:json
+
+CJXDChartmuseum:
+  username: vault:tekton-weasel/creds/cb-cjxd-chartmuseum:username
+  password: vault:tekton-weasel/creds/cb-cjxd-chartmuseum:password
