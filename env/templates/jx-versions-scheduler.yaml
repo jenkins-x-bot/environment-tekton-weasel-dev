@@ -28,7 +28,7 @@ spec:
             entries:
             - static
             - tekton
-            - boot-bucketrepo
+            - bucketrepo
             - boot-local
             - boot-vault
             - boot-vault-tls
