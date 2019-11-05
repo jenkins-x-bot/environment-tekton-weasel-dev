@@ -28,6 +28,7 @@ spec:
             entries:
             - static
             - tekton
+            - boot-bucketrepo
             - boot-local
             - boot-vault
             - boot-vault-tls
@@ -476,6 +477,36 @@ spec:
       report: true
       rerunCommand: /test boot-vault-tls
       trigger: (?m)^/test( all| boot| boot-vault-tls),?(s+|$)
+    - agent: tekton
+      alwaysRun: false
+      context: bucketrepo
+      name: bucketrepo
+      queries:
+      - labels:
+          entries:
+          - approved
+          - lgtm
+        missingLabels:
+          entries:
+          - do-not-merge
+          - do-not-merge/hold
+          - do-not-merge/work-in-progress
+          - needs-ok-to-test
+          - needs-rebase
+      - labels:
+          entries:
+            - updatebot
+        missingLabels:
+          entries:
+            - do-not-merge
+            - do-not-merge/hold
+            - do-not-merge/work-in-progress
+            - needs-ok-to-test
+            - needs-rebase
+            - needs-security-review
+      report: true
+      rerunCommand: /test bucketrepo
+      trigger: (?m)^/test( all| boot| bucketrepo| lighthouse),?(s+|$)
     - agent: tekton
       alwaysRun: true
       context: boot-lh
