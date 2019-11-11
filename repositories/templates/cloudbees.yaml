@@ -190,3 +190,19 @@ spec:
   providerName: github
   org: cloudbees
   repo: jx-repository-controller
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: cloudbees
+    provider: github
+    repository: jx-segment-controller
+  name: cloudbees-jx-segment-controller
+  namespace: jx
+spec:
+  description: Imported application for cloudbees/jx-segment-controller
+  provider: https://github.com
+  providerName: github
+  org: cloudbees
+  repo: jx-segment-controller
