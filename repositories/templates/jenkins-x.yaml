@@ -478,3 +478,19 @@ spec:
   providerName: github
   org: jenkins-x
   repo: status-badge
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: jx-release-version
+  name: jenkins-x-jx-release-version
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/jx-release-version
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: jx-release-version
