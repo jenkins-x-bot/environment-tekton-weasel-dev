@@ -37,7 +37,7 @@ spec:
               value: jenkins-x-bot
             - name: PIPELINE_KIND
               value: release
-            image: gcr.io/jenkinsxio/builder-go:2.0.815-175
+            image: gcr.io/jenkinsxio/builder-go:{{ .Values.versions.builders }}
             imagePullPolicy: IfNotPresent
             name: jx-version-stream-update
             resources: {}
