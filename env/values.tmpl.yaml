@@ -1,5 +1,5 @@
 versions:
-  builders: {{ versionStream docker gcr.io/jenkinsxio/builder-go }}
+  builders: {{ versionStream "docker" "gcr.io/jenkinsxio/builder-go" }}
 
 cluster:
   domain: {{ .Requirements.ingress.domain }}
