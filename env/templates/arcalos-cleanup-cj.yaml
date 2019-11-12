@@ -42,7 +42,7 @@ spec:
               value: "/secret/sa/ci_bot.json"
             - name: XDG_CONFIG_HOME
               value: "/root"
-            image: gcr.io/jenkinsxio/builder-go:2.0.838-196
+            image: gcr.io/jenkinsxio/builder-go:{{ .Values.versions.builders }}
             imagePullPolicy: IfNotPresent
             name: arcalos-cleanup
             resources: {}

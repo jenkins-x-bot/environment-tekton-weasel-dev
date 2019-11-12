@@ -1,3 +1,6 @@
+versions:
+  builders: {{ versionStream docker gcr.io/jenkinsxio/builder-go }}
+
 cluster:
   domain: {{ .Requirements.ingress.domain }}
   namespace: {{ .Requirements.cluster.namespace | default "jx" }}

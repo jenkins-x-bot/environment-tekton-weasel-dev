@@ -30,7 +30,7 @@ spec:
               value: json
             - name: GKE_SA_KEY_FILE
               value: "/builder/home/bdd-credentials.json"
-            image: gcr.io/jenkinsxio/builder-go:2.0.838-196
+            image: gcr.io/jenkinsxio/builder-go:{{ .Values.versions.builders }}
             imagePullPolicy: IfNotPresent
             name: e2e-gc
             resources: {}
