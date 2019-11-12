@@ -206,3 +206,19 @@ spec:
   providerName: github
   org: cloudbees
   repo: jx-segment-controller
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: cloudbees
+    provider: github
+    repository: jx-arcalos-role-controller
+  name: cloudbees-jx-arcalos-role-controller
+  namespace: jx
+spec:
+  description: Imported application for cloudbees/jx-arcalos-role-controller
+  provider: https://github.com
+  providerName: github
+  org: cloudbees
+  repo: jx-arcalos-role-controller
