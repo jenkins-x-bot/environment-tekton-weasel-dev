@@ -20,3 +20,5 @@ tillerNamespace: ""
 sinker:
   replicaCount: 0
 
+build:
+  enabled: false
