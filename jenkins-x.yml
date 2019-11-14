@@ -58,7 +58,10 @@ pipelineConfig:
               - name: helm-build
                 dir: /workspace/source/env
                 command: jx
-                args: ['step','helm','apply', '--boot', '--remote', '--name', 'jenkins-x', '--provider-values-dir', '../kubeProviders']
+                args: ['step','helm','apply', '--boot', '--remote', '--name', 'jenkins-x', '--provider-values-dir', '../kubeProviders', '--verbose']
+                env:
+                - name: JX_LOG_LEVEL
+                  value: debug
 #              - name: verify-env
 #                dir: /workspace/source
 #                command: jx
@@ -75,7 +78,7 @@ pipelineConfig:
               - name: apply-repositories
                 dir: /workspace/source/repositories
                 command: jx
-                args: ['step','helm','apply', '--boot', '--name', 'repos', '--verbose']
+                args: ['step','helm','apply', '--boot', '--name', 'repos']
               - name: apply-pipeline-schedulers
                 dir: /workspace/source/prowConfig
                 command: jx
