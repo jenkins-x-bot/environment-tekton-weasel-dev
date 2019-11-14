@@ -3,7 +3,9 @@ sso-operator:
     grpcHost: "dex.jx"
 dex:
   certs:
-    imageTag: "v1.10.1"
+    # Image with OpenSSL and Kubectl
+    image: rawlingsj80/openssl
+    imageTag: "wip1"
   domain: "dex-jx.{{ .Requirements.ingress.domain }}"
   connectors:
     github:
