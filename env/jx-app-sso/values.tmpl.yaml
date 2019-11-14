@@ -3,7 +3,7 @@ sso-operator:
     grpcHost: "dex.jx"
 dex:
   certs:
-    image: gcr.io/jenkinsxio/builder-python37
+    image: gcr.io/jenkinsxio/builder-dlang
     imageTag: 2.0.987-319
   domain: "dex-jx.{{ .Requirements.ingress.domain }}"
   connectors:
