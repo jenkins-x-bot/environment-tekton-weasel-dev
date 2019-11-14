@@ -3,7 +3,7 @@ dependencies:
   owner: cloudbees
   repo: jxui-frontend
   url: https://github.com/cloudbees/jxui-frontend
-  version: 0.0.946
+  version: 0.0.975
   versionURL: ""
 - host: github.com
   owner: jenkins-x-bot
