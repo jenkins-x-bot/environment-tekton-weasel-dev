@@ -203,6 +203,7 @@ arcalos:
   gitOwner: vault:tekton-weasel/arcalos:git-owner
   prowHMACToken: vault:tekton-weasel/arcalos:prow-hmac-token
   ciSA: vault:tekton-weasel/arcalos/sa:json
+  segmentWriteKey: vault:tekton-weasel/arcalos/segment:write-key
 
 CJXDChartmuseum:
   username: vault:tekton-weasel/creds/cb-cjxd-chartmuseum:username
