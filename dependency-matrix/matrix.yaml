@@ -5,3 +5,9 @@ dependencies:
   url: https://github.com/cloudbees/jxui-frontend
   version: 0.0.946
   versionURL: ""
+- host: github.com
+  owner: jenkins-x-bot
+  repo: bdd-spring-1573906329
+  url: https://github.com/jenkins-x-bot/bdd-spring-1573906329.git
+  version: ""
+  versionURL: ""

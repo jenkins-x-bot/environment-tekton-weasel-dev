@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: jenkins-x-bot
+    provider: github
+    repository: bdd-spring-1573906329
+  name: jenkins-x-bot-bdd-spring-1573906329
+spec:
+  description: Imported application for jenkins-x-bot/bdd-spring-1573906329
+  httpCloneURL: https://github.com/jenkins-x-bot/bdd-spring-1573906329.git
+  org: jenkins-x-bot
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: bdd-spring-1573906329
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/jenkins-x-bot/bdd-spring-1573906329.git
