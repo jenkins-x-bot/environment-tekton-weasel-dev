@@ -1,0 +1,45 @@
+apiVersion: jenkins.io/v1
+kind: Scheduler
+metadata:
+  name: bdd-jx-scheduler
+spec:
+  plugins:
+    entries:
+      - label
+  postsubmits:
+    replace: true
+    entries:
+    - agent: tekton
+      branches:
+        entries:
+        - master
+      name: release
+      context: release
+  presubmits:
+    replace: true
+    entries:
+    - agent: tekton
+      alwaysRun: true
+      context: pr-build
+      name: pr-build
+      policy:
+        requiredStatusChecks:
+          contexts:
+            entries:
+            - pr-build
+      queries:
+      - labels:
+          entries:
+          - approved
+          - lgtm
+        missingLabels:
+          entries:
+          - do-not-merge
+          - do-not-merge/hold
+          - do-not-merge/work-in-progress
+          - needs-ok-to-test
+          - needs-rebase
+          - needs-security-review
+      report: true
+      rerunCommand: /test this
+      trigger: (?m)^/test( all| this),?(\s+|$)

@@ -494,3 +494,19 @@ spec:
   providerName: github
   org: jenkins-x
   repo: jx-release-version
+---
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  labels:
+    owner: jenkins-x
+    provider: github
+    repository: bdd-jx
+  name: jenkins-x-bdd-jx
+  namespace: jx
+spec:
+  description: Imported application for jenkins-x/bdd-jx
+  provider: https://github.com
+  providerName: github
+  org: jenkins-x
+  repo: bdd-jx
