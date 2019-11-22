@@ -1,0 +1,180 @@
+apiVersion: jenkins.io/v1
+kind: Scheduler
+metadata:
+  name: lh-scheduler
+spec:
+  plugins:
+    entries:
+      - label
+  postsubmits:
+    replace: true
+    entries:
+    - agent: tekton
+      branches:
+        entries:
+        - master
+      name: release
+      context: ""
+  presubmits:
+    replace: true
+    entries:
+    - agent: tekton
+      alwaysRun: true
+      context: ""
+      name: pr-build
+      policy:
+        requiredStatusChecks:
+          contexts:
+            entries:
+            - pr-build
+      queries:
+      - labels:
+          entries:
+          - approved
+          - lgtm
+        missingLabels:
+          entries:
+          - do-not-merge
+          - do-not-merge/hold
+          - do-not-merge/work-in-progress
+          - needs-ok-to-test
+          - needs-rebase
+          - needs-security-review
+      - labels:
+          entries:
+            - updatebot
+        missingLabels:
+          entries:
+            - do-not-merge
+            - do-not-merge/hold
+            - do-not-merge/work-in-progress
+            - needs-ok-to-test
+            - needs-rebase
+            - needs-security-review
+      report: true
+      rerunCommand: /test pr-build
+      trigger: (?m)^/test( all| pr-build),?(s+|$)
+    - agent: tekton
+      alwaysRun: false
+      context: ghe
+      name: ghe
+      queries:
+      - labels:
+          entries:
+          - approved
+          - lgtm
+        missingLabels:
+          entries:
+          - do-not-merge
+          - do-not-merge/hold
+          - do-not-merge/work-in-progress
+          - needs-ok-to-test
+          - needs-rebase
+          - needs-security-review
+      - labels:
+          entries:
+            - updatebot
+        missingLabels:
+          entries:
+            - do-not-merge
+            - do-not-merge/hold
+            - do-not-merge/work-in-progress
+            - needs-ok-to-test
+            - needs-rebase
+            - needs-security-review
+      report: true
+      rerunCommand: /test ghe
+      trigger: (?m)^/test( all| ghe),?(s+|$)
+    - agent: tekton
+      alwaysRun: false
+      context: github
+      name: github
+      queries:
+      - labels:
+          entries:
+          - approved
+          - lgtm
+        missingLabels:
+          entries:
+          - do-not-merge
+          - do-not-merge/hold
+          - do-not-merge/work-in-progress
+          - needs-ok-to-test
+          - needs-rebase
+          - needs-security-review
+      - labels:
+          entries:
+            - updatebot
+        missingLabels:
+          entries:
+            - do-not-merge
+            - do-not-merge/hold
+            - do-not-merge/work-in-progress
+            - needs-ok-to-test
+            - needs-rebase
+            - needs-security-review
+      report: true
+      rerunCommand: /test github
+      trigger: (?m)^/test( all| github),?(s+|$)
+    - agent: tekton
+      alwaysRun: false
+      context: bitbucketserver
+      name: bitbucketserver
+      queries:
+      - labels:
+          entries:
+          - approved
+          - lgtm
+        missingLabels:
+          entries:
+          - do-not-merge
+          - do-not-merge/hold
+          - do-not-merge/work-in-progress
+          - needs-ok-to-test
+          - needs-rebase
+          - needs-security-review
+      - labels:
+          entries:
+            - updatebot
+        missingLabels:
+          entries:
+            - do-not-merge
+            - do-not-merge/hold
+            - do-not-merge/work-in-progress
+            - needs-ok-to-test
+            - needs-rebase
+            - needs-security-review
+      report: true
+      rerunCommand: /test bitbucketserver
+      trigger: (?m)^/test( all| bitbucketserver),?(s+|$)
+    - agent: tekton
+      alwaysRun: false
+      context: gitlab
+      name: gitlab
+      queries:
+      - labels:
+          entries:
+          - approved
+          - lgtm
+        missingLabels:
+          entries:
+          - do-not-merge
+          - do-not-merge/hold
+          - do-not-merge/work-in-progress
+          - needs-ok-to-test
+          - needs-rebase
+          - needs-security-review
+      - labels:
+          entries:
+            - updatebot
+        missingLabels:
+          entries:
+            - do-not-merge
+            - do-not-merge/hold
+            - do-not-merge/work-in-progress
+            - needs-ok-to-test
+            - needs-rebase
+            - needs-security-review
+      report: true
+      rerunCommand: /test gitlab
+      trigger: (?m)^/test( all| gitlab),?(s+|$)
