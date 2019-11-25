@@ -32,4 +32,4 @@ dependencies:
 - alias: ui
   name: jxui
   repository: https://charts.cloudbees.com/cjxd/cloudbees
-  version: 0.0.1002
+  version: 0.0.1003
