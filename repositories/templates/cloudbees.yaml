@@ -21,22 +21,6 @@ metadata:
   labels:
     owner: cloudbees
     provider: github
-    repository: cloudbees-jenkins-x-distro
-  name: cloudbees-cloudbees-jenkins-x-distro
-  namespace: jx
-spec:
-  description: Imported application for cloudbees/cloudbees-jenkins-x-distro
-  provider: https://github.com
-  providerName: github
-  org: cloudbees
-  repo: cloudbees-jenkins-x-distro
----
-apiVersion: jenkins.io/v1
-kind: SourceRepository
-metadata:
-  labels:
-    owner: cloudbees
-    provider: github
     repository: jxui-ts-client
   name: cloudbees-jxui-ts-client
   namespace: jx
