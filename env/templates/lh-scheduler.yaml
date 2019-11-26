@@ -27,6 +27,8 @@ spec:
           contexts:
             entries:
             - pr-build
+            - github
+            - ghe
       queries:
       - labels:
           entries:
@@ -55,7 +57,7 @@ spec:
       rerunCommand: /test pr-build
       trigger: (?m)^/test( all| pr-build),?(s+|$)
     - agent: tekton
-      alwaysRun: false
+      alwaysRun: true
       context: ghe
       name: ghe
       queries:
@@ -86,7 +88,7 @@ spec:
       rerunCommand: /test ghe
       trigger: (?m)^/test( all| ghe),?(s+|$)
     - agent: tekton
-      alwaysRun: false
+      alwaysRun: true
       context: github
       name: github
       queries:
